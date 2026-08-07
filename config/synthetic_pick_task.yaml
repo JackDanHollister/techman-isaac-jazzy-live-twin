@@ -1,0 +1,63 @@
+format_version: 1
+
+# Deterministic camera-free scene used for the first synthetic pick pipeline.
+seed: 1407
+pin_count: 8
+frame_id: base
+tray_center_xyz: [0.50, 0.0, 0.0]
+
+robot:
+  joint_names: [joint_1, joint_2, joint_3, joint_4, joint_5, joint_6]
+  ready_joint_positions: [0.0, 0.0, 1.5708, 0.0, 1.5708, 0.0]
+  planning_tool_frame: flange
+
+tool_model:
+  # This is the current CAD fingertip plane, used as a virtual pin-grasp point.
+  # It is not the OnRobot nominal 2FG7 TCP and is not physically calibrated.
+  pin_grasp_tcp_z_from_2fg7_origin_m: 0.16225
+  flange_to_2fg7_origin_xyz_m: [0.0, 0.0, 0.0]
+  flange_to_2fg7_origin_rpy_rad: [0.0, 0.0, 0.0]
+  quick_changer_robot_side_modeled: false
+  onrobot_nominal_device_tcp_z_m: 0.125
+  standard_quick_changer_flange_offset_z_m: 0.0136
+
+collision_scene:
+  foam_thickness_m: 0.04
+  tray_wall_thickness_m: 0.012
+  tray_wall_height_m: 0.035
+  other_pin_shaft_width_m: 0.002
+  other_pin_head_radius_m: 0.003
+  specimen_padding_m: 0.0
+
+planning:
+  stages: [pregrasp, grasp, lift]
+  selection_rule: maximum_minimum_sampled_sphere_clearance
+  required_sampled_sphere_clearance_m: 0.005
+  goal_translation_tolerance_m: 0.0001
+  goal_orientation_tolerance_rad: 0.005
+  collision_validation_dt_seconds: 0.0033333333333333335
+  control_dt_seconds: 0.0033333333333333335
+  maximum_control_step_rad: 0.01
+  # Slow the time-optimal cuMotion trajectory for the uncalibrated imported
+  # acceleration drives; this is an offline Isaac tracking profile only.
+  execution_time_scale: 3.0
+  stage_hold_seconds: 0.75
+
+isaac_execution:
+  # The imported 1000/100 acceleration-drive gains showed about 0.095 rad of
+  # gravity sag at joints 3/4. These gains are an Isaac-only stabilization
+  # profile and have no claimed relationship to the real Techman controller.
+  proportional_gains: [15000.0, 15000.0, 15000.0, 15000.0, 15000.0, 15000.0]
+  derivative_gains: [250.0, 250.0, 250.0, 250.0, 250.0, 250.0]
+  save_to_usd: false
+  status: simulation_only_uncalibrated_acceleration_drive_smoke
+
+scope:
+  camera_or_depth_used: false
+  ros_used: false
+  real_robot_commanded: false
+  dynamics_calibrated: false
+  note: >-
+    Offline synthetic planning only. The fixed-finger collision geometry, mount,
+    pin-grasp point, Quick Changer, specimen primitives, and controller limits are
+    provisional and must not be used to command Watson.

@@ -1,0 +1,820 @@
+{
+  "timestamp_utc": "2026-07-21T12:38:19.046790+00:00",
+  "command": [
+    "isaac-sim-python",
+    "scripts/import_tm5s_isaac_sim.py",
+    "--urdf",
+    "generated/tool_profiles/watson_qc_nominal/isaac_grasp_cycle/staged/tm5s_with_2fg7.urdf",
+    "--validation-profile",
+    "watson_qc_articulated_2fg7",
+    "--output-dir",
+    "generated/isaac/6.0.1-watson-qc-10mm-grasp",
+    "--report",
+    "outputs/isaac_sim/6.0.1/watson_qc_10mm_grasp_import_report.json",
+    "--warmup-steps",
+    "20",
+    "--benchmark-steps",
+    "100",
+    "--benchmark-repeats",
+    "1"
+  ],
+  "hostname": "validation-host",
+  "platform": "Linux-6.17.0-1028-oem-x86_64-with-glibc2.39",
+  "python_version": "3.12.13",
+  "package_versions": {
+    "isaacsim": "6.0.1.0",
+    "isaacsim-asset": "6.0.1.0",
+    "isaacsim-core": "6.0.1.0"
+  },
+  "installed_isaac_package_versions": {
+    "isaacsim": "6.0.1.0",
+    "isaacsim-app": "6.0.1.0",
+    "isaacsim-asset": "6.0.1.0",
+    "isaacsim-benchmark": "6.0.1.0",
+    "isaacsim-code-editor": "6.0.1.0",
+    "isaacsim-core": "6.0.1.0",
+    "isaacsim-cortex": "6.0.1.0",
+    "isaacsim-example": "6.0.1.0",
+    "isaacsim-extscache-kit": "6.0.1.0",
+    "isaacsim-extscache-kit-sdk": "6.0.1.0",
+    "isaacsim-extscache-physics": "6.0.1.0",
+    "isaacsim-gui": "6.0.1.0",
+    "isaacsim-kernel": "6.0.1.0",
+    "isaacsim-replicator": "6.0.1.0",
+    "isaacsim-rl": "6.0.1.0",
+    "isaacsim-robot": "6.0.1.0",
+    "isaacsim-robot-motion": "6.0.1.0",
+    "isaacsim-robot-setup": "6.0.1.0",
+    "isaacsim-ros1": "6.0.1.0",
+    "isaacsim-ros2": "6.0.1.0",
+    "isaacsim-sensor": "6.0.1.0",
+    "isaacsim-storage": "6.0.1.0",
+    "isaacsim-template": "6.0.1.0",
+    "isaacsim-test": "6.0.1.0",
+    "isaacsim-utils": "6.0.1.0"
+  },
+  "cuda_visible_devices": "0",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 595.71.05, 97887 MiB",
+  "validation_scope": "standalone_asset_and_physx_only",
+  "validation_profile": "watson_qc_articulated_2fg7",
+  "source_urdf_topology": {
+    "profile": "watson_qc_articulated_2fg7",
+    "links": [
+      "base",
+      "finger_tip_plane",
+      "flange",
+      "gripper_tcp",
+      "link_0",
+      "link_1",
+      "link_2",
+      "link_3",
+      "link_4",
+      "link_5",
+      "link_6",
+      "onrobot_2fg7_base_link",
+      "onrobot_2fg7_left_finger_link",
+      "onrobot_2fg7_origin",
+      "onrobot_2fg7_right_finger_link",
+      "onrobot_nominal_tcp",
+      "onrobot_qc_robot_side_link",
+      "pin_grasp_tcp"
+    ],
+    "joint_types": {
+      "base_fixed_joint": "fixed",
+      "flange_fixed_joint": "fixed",
+      "flange_to_onrobot_qc_robot_side": "fixed",
+      "gripper_tcp_to_pin_grasp_tcp": "fixed",
+      "joint_1": "revolute",
+      "joint_2": "revolute",
+      "joint_3": "revolute",
+      "joint_4": "revolute",
+      "joint_5": "revolute",
+      "joint_6": "revolute",
+      "onrobot_2fg7_base_link_to_finger_tip_plane": "fixed",
+      "onrobot_2fg7_left_finger_joint": "prismatic",
+      "onrobot_2fg7_origin_to_base": "fixed",
+      "onrobot_2fg7_origin_to_gripper_tcp": "fixed",
+      "onrobot_2fg7_origin_to_onrobot_nominal_tcp": "fixed",
+      "onrobot_2fg7_right_finger_joint": "prismatic",
+      "onrobot_qc_robot_side_to_2fg7_origin": "fixed"
+    },
+    "joint_bodies": {
+      "base_fixed_joint": [
+        "base",
+        "link_0"
+      ],
+      "flange_fixed_joint": [
+        "link_6",
+        "flange"
+      ],
+      "flange_to_onrobot_qc_robot_side": [
+        "flange",
+        "onrobot_qc_robot_side_link"
+      ],
+      "gripper_tcp_to_pin_grasp_tcp": [
+        "gripper_tcp",
+        "pin_grasp_tcp"
+      ],
+      "joint_1": [
+        "link_0",
+        "link_1"
+      ],
+      "joint_2": [
+        "link_1",
+        "link_2"
+      ],
+      "joint_3": [
+        "link_2",
+        "link_3"
+      ],
+      "joint_4": [
+        "link_3",
+        "link_4"
+      ],
+      "joint_5": [
+        "link_4",
+        "link_5"
+      ],
+      "joint_6": [
+        "link_5",
+        "link_6"
+      ],
+      "onrobot_2fg7_base_link_to_finger_tip_plane": [
+        "onrobot_2fg7_base_link",
+        "finger_tip_plane"
+      ],
+      "onrobot_2fg7_left_finger_joint": [
+        "onrobot_2fg7_base_link",
+        "onrobot_2fg7_left_finger_link"
+      ],
+      "onrobot_2fg7_origin_to_base": [
+        "onrobot_2fg7_origin",
+        "onrobot_2fg7_base_link"
+      ],
+      "onrobot_2fg7_origin_to_gripper_tcp": [
+        "onrobot_2fg7_origin",
+        "gripper_tcp"
+      ],
+      "onrobot_2fg7_origin_to_onrobot_nominal_tcp": [
+        "onrobot_2fg7_origin",
+        "onrobot_nominal_tcp"
+      ],
+      "onrobot_2fg7_right_finger_joint": [
+        "onrobot_2fg7_base_link",
+        "onrobot_2fg7_right_finger_link"
+      ],
+      "onrobot_qc_robot_side_to_2fg7_origin": [
+        "onrobot_qc_robot_side_link",
+        "onrobot_2fg7_origin"
+      ]
+    },
+    "joint_mimics": {
+      "onrobot_2fg7_right_finger_joint": {
+        "source_joint": "onrobot_2fg7_left_finger_joint",
+        "multiplier": 1.0,
+        "offset": 0.0
+      }
+    },
+    "joint_origins": {
+      "base_fixed_joint": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "flange_fixed_joint": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "flange_to_onrobot_qc_robot_side": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "gripper_tcp_to_pin_grasp_tcp": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "joint_1": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.1484
+        ],
+        "rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ]
+      },
+      "joint_2": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          -1.570796,
+          -1.570796,
+          0.0
+        ]
+      },
+      "joint_3": {
+        "xyz": [
+          0.429,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ]
+      },
+      "joint_4": {
+        "xyz": [
+          0.386,
+          0.0,
+          -0.1478
+        ],
+        "rpy": [
+          0.0,
+          -0.0,
+          1.570796
+        ]
+      },
+      "joint_5": {
+        "xyz": [
+          0.0,
+          -0.1315,
+          0.0
+        ],
+        "rpy": [
+          1.570796,
+          -0.0,
+          0.0
+        ]
+      },
+      "joint_6": {
+        "xyz": [
+          0.0,
+          -0.13495,
+          0.0
+        ],
+        "rpy": [
+          1.570796,
+          -0.0,
+          0.0
+        ]
+      },
+      "onrobot_2fg7_base_link_to_finger_tip_plane": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.16225
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "onrobot_2fg7_left_finger_joint": {
+        "xyz": [
+          0.032239,
+          -0.029494,
+          0.12005
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "onrobot_2fg7_origin_to_base": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "onrobot_2fg7_origin_to_gripper_tcp": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.15725
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "onrobot_2fg7_origin_to_onrobot_nominal_tcp": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.125
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "onrobot_2fg7_right_finger_joint": {
+        "xyz": [
+          -0.054361,
+          -0.029494,
+          0.12005
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "onrobot_qc_robot_side_to_2fg7_origin": {
+        "xyz": [
+          0.0,
+          0.0,
+          0.0136
+        ],
+        "rpy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "source_urdf_meshes": {
+    "mesh_reference_count": 20,
+    "unique_resolved_mesh_count": 17,
+    "all_meshes_resolved": true
+  },
+  "source_urdf": "reference/seven_pin/source/tm5s_with_2fg7.urdf",
+  "source_urdf_sha256": "044e0ad902d50fe2697f23237e695ad8ed54bbda18200dd06289c6bae3400ebc",
+  "output_directory": "reference/seven_pin/isaac",
+  "output_usd": "reference/seven_pin/isaac/tm5s_with_2fg7/tm5s_with_2fg7.usda",
+  "output_usd_sha256": "f689ac27d5eeb2dbc05137fb50c8d5fbb390c3c476ff911ca8adb4d7e0eb77b7",
+  "import_elapsed_seconds": 161.1985112290131,
+  "asset_files": [
+    "tm5s_with_2fg7/payloads/Physics/mujoco.usda",
+    "tm5s_with_2fg7/payloads/Physics/physics.usda",
+    "tm5s_with_2fg7/payloads/Physics/physx.usda",
+    "tm5s_with_2fg7/payloads/base.usda",
+    "tm5s_with_2fg7/payloads/geometries.usd",
+    "tm5s_with_2fg7/payloads/instances.usda",
+    "tm5s_with_2fg7/payloads/materials.usda",
+    "tm5s_with_2fg7/payloads/robot.usda",
+    "tm5s_with_2fg7/tm5s_with_2fg7.usda"
+  ],
+  "asset_artifacts": {
+    "tm5s_with_2fg7/payloads/Physics/mujoco.usda": {
+      "size_bytes": 1314654,
+      "sha256": "4f8e4d7de3950dbc3007c906aadf93238ab8d4c2b85564786007db3b991cedef"
+    },
+    "tm5s_with_2fg7/payloads/Physics/physics.usda": {
+      "size_bytes": 21774,
+      "sha256": "8e135d38f76b57794017a5192dd0049e5b421fdf2c3df0bd4939f8d1504afefb"
+    },
+    "tm5s_with_2fg7/payloads/Physics/physx.usda": {
+      "size_bytes": 1697,
+      "sha256": "ed8311d33b1f3de3b05d39635a8373fe361da05e9ca3d8ccf76b1bc14e47f35a"
+    },
+    "tm5s_with_2fg7/payloads/base.usda": {
+      "size_bytes": 4083891,
+      "sha256": "f49979f8a82c981edcd2e96538809cfadc39e581daa1d68be3a5bddea509577b"
+    },
+    "tm5s_with_2fg7/payloads/geometries.usd": {
+      "size_bytes": 11215609,
+      "sha256": "e72a3a28dbd23d2cd382f833eea816818e3c428f2876ec781a25dbdda4564911"
+    },
+    "tm5s_with_2fg7/payloads/instances.usda": {
+      "size_bytes": 6133697,
+      "sha256": "ed3996802d8f7d5ef952c60c43dc607ad9e45a61178ec1a9b2a0a0054e087739"
+    },
+    "tm5s_with_2fg7/payloads/materials.usda": {
+      "size_bytes": 16671,
+      "sha256": "77b1a4996639b1e595bb81a7fc506cad7f6bb9d8c16eaba392f228ba7b6fe203"
+    },
+    "tm5s_with_2fg7/payloads/robot.usda": {
+      "size_bytes": 5316,
+      "sha256": "e27144c7109cddb9f333a4b9be30a3088ed3d097068273f4d641e865c4945e84"
+    },
+    "tm5s_with_2fg7/tm5s_with_2fg7.usda": {
+      "size_bytes": 815,
+      "sha256": "f689ac27d5eeb2dbc05137fb50c8d5fbb390c3c476ff911ca8adb4d7e0eb77b7"
+    }
+  },
+  "default_prim": "/tm5s_with_2fg7",
+  "physics_variant_selection": "physx",
+  "stage_meters_per_unit": 1.0,
+  "stage_up_axis": "Z",
+  "unresolved_dependencies": [],
+  "articulation_roots": [
+    "/tm5s_with_2fg7/Geometry/base"
+  ],
+  "moving_joints": [
+    "joint_1",
+    "joint_2",
+    "joint_3",
+    "joint_4",
+    "joint_5",
+    "joint_6",
+    "onrobot_2fg7_left_finger_joint",
+    "onrobot_2fg7_right_finger_joint"
+  ],
+  "dof_count": 8,
+  "fixed_joints": [
+    "base_fixed_joint",
+    "flange_to_onrobot_qc_robot_side",
+    "onrobot_2fg7_origin_to_base",
+    "onrobot_2fg7_origin_to_gripper_tcp"
+  ],
+  "collapsed_fixed_joints": [
+    "flange_fixed_joint",
+    "gripper_tcp_to_pin_grasp_tcp",
+    "onrobot_2fg7_base_link_to_finger_tip_plane",
+    "onrobot_2fg7_origin_to_onrobot_nominal_tcp",
+    "onrobot_qc_robot_side_to_2fg7_origin"
+  ],
+  "collapsed_identity_fixed_joints": [
+    "flange_fixed_joint",
+    "gripper_tcp_to_pin_grasp_tcp"
+  ],
+  "joint_body_names": {
+    "joint_1": [
+      "link_0",
+      "link_1"
+    ],
+    "joint_2": [
+      "link_1",
+      "link_2"
+    ],
+    "joint_3": [
+      "link_2",
+      "link_3"
+    ],
+    "joint_4": [
+      "link_3",
+      "link_4"
+    ],
+    "joint_5": [
+      "link_4",
+      "link_5"
+    ],
+    "joint_6": [
+      "link_5",
+      "link_6"
+    ],
+    "flange_to_onrobot_qc_robot_side": [
+      "flange",
+      "onrobot_qc_robot_side_link"
+    ],
+    "onrobot_2fg7_origin_to_base": [
+      "onrobot_2fg7_origin",
+      "onrobot_2fg7_base_link"
+    ],
+    "onrobot_2fg7_left_finger_joint": [
+      "onrobot_2fg7_base_link",
+      "onrobot_2fg7_left_finger_link"
+    ],
+    "onrobot_2fg7_right_finger_joint": [
+      "onrobot_2fg7_base_link",
+      "onrobot_2fg7_right_finger_link"
+    ],
+    "onrobot_2fg7_origin_to_gripper_tcp": [
+      "onrobot_2fg7_origin",
+      "gripper_tcp"
+    ]
+  },
+  "imported_mimic_joints": {
+    "onrobot_2fg7_right_finger_joint": {
+      "source_joint_path": "/tm5s_with_2fg7/Physics/onrobot_2fg7_left_finger_joint",
+      "source_joint": "onrobot_2fg7_left_finger_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    }
+  },
+  "drive_validation": {
+    "onrobot_2fg7_left_finger_joint": {
+      "axis": "linear",
+      "type": "acceleration",
+      "stiffness_usd_per_degree": 1000.0,
+      "damping_usd_per_degree": 100.0,
+      "mimic_controlled": false,
+      "independent_drive": true
+    },
+    "onrobot_2fg7_right_finger_joint": {
+      "axis": "linear",
+      "type": "acceleration",
+      "stiffness_usd_per_degree": 1000.0,
+      "damping_usd_per_degree": 100.0,
+      "mimic_controlled": true,
+      "independent_drive": false
+    },
+    "joint_1": {
+      "axis": "angular",
+      "type": "acceleration",
+      "stiffness_usd_per_degree": 17.453292846679688,
+      "damping_usd_per_degree": 1.7453292608261108,
+      "mimic_controlled": false,
+      "independent_drive": true
+    },
+    "joint_2": {
+      "axis": "angular",
+      "type": "acceleration",
+      "stiffness_usd_per_degree": 17.453292846679688,
+      "damping_usd_per_degree": 1.7453292608261108,
+      "mimic_controlled": false,
+      "independent_drive": true
+    },
+    "joint_3": {
+      "axis": "angular",
+      "type": "acceleration",
+      "stiffness_usd_per_degree": 17.453292846679688,
+      "damping_usd_per_degree": 1.7453292608261108,
+      "mimic_controlled": false,
+      "independent_drive": true
+    },
+    "joint_4": {
+      "axis": "angular",
+      "type": "acceleration",
+      "stiffness_usd_per_degree": 17.453292846679688,
+      "damping_usd_per_degree": 1.7453292608261108,
+      "mimic_controlled": false,
+      "independent_drive": true
+    },
+    "joint_5": {
+      "axis": "angular",
+      "type": "acceleration",
+      "stiffness_usd_per_degree": 17.453292846679688,
+      "damping_usd_per_degree": 1.7453292608261108,
+      "mimic_controlled": false,
+      "independent_drive": true
+    },
+    "joint_6": {
+      "axis": "angular",
+      "type": "acceleration",
+      "stiffness_usd_per_degree": 17.453292846679688,
+      "damping_usd_per_degree": 1.7453292608261108,
+      "mimic_controlled": false,
+      "independent_drive": true
+    }
+  },
+  "world_anchor_joints": [
+    "/tm5s_with_2fg7/Physics/base_fixed_joint"
+  ],
+  "expected_link_paths": {
+    "base": "/tm5s_with_2fg7/Geometry/base",
+    "finger_tip_plane": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/finger_tip_plane",
+    "flange": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange",
+    "gripper_tcp": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/gripper_tcp",
+    "link_0": "/tm5s_with_2fg7/Geometry/base/link_0",
+    "link_1": "/tm5s_with_2fg7/Geometry/base/link_0/link_1",
+    "link_2": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2",
+    "link_3": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3",
+    "link_4": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4",
+    "link_5": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5",
+    "link_6": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6",
+    "onrobot_2fg7_base_link": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link",
+    "onrobot_2fg7_left_finger_link": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_left_finger_link",
+    "onrobot_2fg7_origin": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin",
+    "onrobot_2fg7_right_finger_link": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_right_finger_link",
+    "onrobot_nominal_tcp": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_nominal_tcp",
+    "onrobot_qc_robot_side_link": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link",
+    "pin_grasp_tcp": "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/gripper_tcp/pin_grasp_tcp"
+  },
+  "tcp_marker_mass_kg": 9.999999974752427e-07,
+  "tcp_marker_diagonal_inertia_kg_m2": [
+    6.399999887690688e-12,
+    6.399999887690688e-12,
+    6.399999887690688e-12
+  ],
+  "robot_schema_link_targets_diagnostic_only": [
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/gripper_tcp",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_left_finger_link",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_right_finger_link"
+  ],
+  "robot_schema_joint_targets_diagnostic_only": [
+    "/tm5s_with_2fg7/Physics/onrobot_2fg7_origin_to_base",
+    "/tm5s_with_2fg7/Physics/onrobot_2fg7_left_finger_joint",
+    "/tm5s_with_2fg7/Physics/onrobot_2fg7_right_finger_joint",
+    "/tm5s_with_2fg7/Physics/onrobot_2fg7_origin_to_gripper_tcp"
+  ],
+  "physical_rigid_body_paths": [
+    "/tm5s_with_2fg7/Geometry/base/link_0",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/gripper_tcp",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_left_finger_link",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_right_finger_link"
+  ],
+  "physical_joint_paths": [
+    "/tm5s_with_2fg7/Physics/base_fixed_joint",
+    "/tm5s_with_2fg7/Physics/flange_to_onrobot_qc_robot_side",
+    "/tm5s_with_2fg7/Physics/joint_1",
+    "/tm5s_with_2fg7/Physics/joint_2",
+    "/tm5s_with_2fg7/Physics/joint_3",
+    "/tm5s_with_2fg7/Physics/joint_4",
+    "/tm5s_with_2fg7/Physics/joint_5",
+    "/tm5s_with_2fg7/Physics/joint_6",
+    "/tm5s_with_2fg7/Physics/onrobot_2fg7_left_finger_joint",
+    "/tm5s_with_2fg7/Physics/onrobot_2fg7_origin_to_base",
+    "/tm5s_with_2fg7/Physics/onrobot_2fg7_origin_to_gripper_tcp",
+    "/tm5s_with_2fg7/Physics/onrobot_2fg7_right_finger_joint"
+  ],
+  "robot_schema_missing_link_api_paths": [
+    "/tm5s_with_2fg7/Geometry/base/link_0",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link"
+  ],
+  "robot_schema_missing_joint_api_paths": [
+    "/tm5s_with_2fg7/Physics/base_fixed_joint",
+    "/tm5s_with_2fg7/Physics/flange_to_onrobot_qc_robot_side",
+    "/tm5s_with_2fg7/Physics/joint_1",
+    "/tm5s_with_2fg7/Physics/joint_2",
+    "/tm5s_with_2fg7/Physics/joint_3",
+    "/tm5s_with_2fg7/Physics/joint_4",
+    "/tm5s_with_2fg7/Physics/joint_5",
+    "/tm5s_with_2fg7/Physics/joint_6"
+  ],
+  "robot_schema_api_coverage_incomplete_observed_importer_limitation": true,
+  "mesh_count": 10613,
+  "empty_mesh_face_paths": [],
+  "empty_mesh_point_paths": [],
+  "collision_prim_count": 11,
+  "collision_prim_paths": [
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/cylinder_1",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/base_link_1/base_link",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_left_finger_link/left_finger_link_1/left_finger_link",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_right_finger_link/right_finger_link_1/right_finger_link",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/tn__tm5sio_c_bC/tn__tm5sio_c_bC",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/tn__tm5sj6_c_bC/tn__tm5sj6_c_bC",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/tn__tm5sj5_c_bC/tn__tm5sj5_c_bC",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/tn__tm5sa2_c_bC/tn__tm5sa2_c_bC",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/tn__tm5sa1_c_bC/tn__tm5sa1_c_bC",
+    "/tm5s_with_2fg7/Geometry/base/link_0/link_1/tn__tm5sj1_c_bC/tn__tm5sj1_c_bC",
+    "/tm5s_with_2fg7/Geometry/base/link_0/tn__tm5sbase_c_YF/tn__tm5sbase_c_YF"
+  ],
+  "preserved_required_links": [
+    "base",
+    "finger_tip_plane",
+    "flange",
+    "gripper_tcp",
+    "link_0",
+    "link_1",
+    "link_2",
+    "link_3",
+    "link_4",
+    "link_5",
+    "link_6",
+    "onrobot_2fg7_base_link",
+    "onrobot_2fg7_left_finger_link",
+    "onrobot_2fg7_origin",
+    "onrobot_2fg7_right_finger_link",
+    "onrobot_nominal_tcp",
+    "onrobot_qc_robot_side_link",
+    "pin_grasp_tcp"
+  ],
+  "missing_required_links": [],
+  "resolved_articulation_path": "/tm5s_with_2fg7/Geometry/base",
+  "physx_dof_names": [
+    "joint_1",
+    "joint_2",
+    "joint_3",
+    "joint_4",
+    "joint_5",
+    "joint_6",
+    "onrobot_2fg7_left_finger_joint",
+    "onrobot_2fg7_right_finger_joint"
+  ],
+  "initial_joint_positions": [
+    -2.440868840380972e-09,
+    9.780920517954428e-10,
+    2.2637964836036417e-09,
+    -6.968528865058943e-09,
+    -7.75553232745807e-10,
+    1.1443516134690412e-09,
+    5.6809299486815235e-09,
+    5.677498471357012e-09
+  ],
+  "joint_positions_after_warmup": [
+    3.49930289189615e-08,
+    2.1567592156657156e-08,
+    7.261369461275535e-08,
+    2.6940387698459745e-08,
+    1.7619440129124087e-08,
+    1.9393313621662855e-08,
+    2.8413813524252873e-09,
+    2.8435482857247507e-09
+  ],
+  "joint_positions_after_benchmark": [
+    4.194719949168757e-08,
+    2.3172621155254092e-08,
+    7.89020546676511e-08,
+    3.785593705174506e-08,
+    2.3670901683203738e-08,
+    1.9255031347142904e-08,
+    3.1368745379012353e-09,
+    3.1306366388150764e-09
+  ],
+  "joint_drift_radians_after_warmup": [
+    6.9541705727260705e-09,
+    1.6050289985969357e-09,
+    6.2883600548957475e-09,
+    1.0915549353285314e-08,
+    6.051461554079651e-09,
+    1.382822745199519e-10,
+    2.9549318547594794e-10,
+    2.8708835309032565e-10
+  ],
+  "max_joint_drift_radians_after_warmup": 1.0915549353285314e-08,
+  "physics_benchmark": {
+    "physics_dt_seconds": 0.016666666666666666,
+    "warmup_steps": 20,
+    "measured_steps_per_repeat": 100,
+    "repeats": 1,
+    "observed_step_deltas": [
+      100
+    ],
+    "elapsed_seconds_per_repeat": [
+      0.05219519301317632
+    ],
+    "steps_per_second_per_repeat": [
+      1915.8852420519966
+    ],
+    "steps_per_second_p05": 1915.8852420519966,
+    "steps_per_second_p50": 1915.8852420519966,
+    "steps_per_second_p95": 1915.8852420519966,
+    "simulated_seconds_per_repeat": [
+      1.666666753590107
+    ],
+    "real_time_factor_per_repeat": [
+      31.931422366219973
+    ],
+    "real_time_factor_p05": 31.931422366219973,
+    "real_time_factor_p50": 31.931422366219973,
+    "real_time_factor_p95": 31.931422366219973,
+    "rendering_enabled": false
+  },
+  "fixed_base": true,
+  "fixed_joints_merged": false,
+  "urdf_importer_api": "URDFImporter 3",
+  "headless": true,
+  "fast_shutdown": true,
+  "active_gpu": 0,
+  "multi_gpu": false,
+  "physx_dynamics_device": "cpu",
+  "camera_or_depth_used": false,
+  "isaac_ros_or_moveit_validated": false,
+  "real_robot_commanded": false
+}

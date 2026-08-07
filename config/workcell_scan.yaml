@@ -1,0 +1,173 @@
+format_version: 1
+name: zivid_pin_drawer_240mm
+status: provisional_visual_reference
+
+point_cloud:
+  capture_id: 240mm
+  path: outputs/workcell_scan/20260720_zivid_pin_drawer/insects-pins-240mm-filtered.ply
+  sha256: 4e2256c2395f8dfb9b20359aa9ea357d774033956718b2fd9c96254b81105c50
+  provenance_manifest: outputs/workcell_scan/20260720_zivid_pin_drawer/inspection.json
+  input_units: millimetres
+  scale_to_metres: 0.001
+  expected_valid_points: 407446
+  voxel_size_m: 0.0005
+  maximum_render_points: 100000
+  point_width_m: 0.0008
+  prim_path: /Workcell/PinDrawerScan
+
+secondary_point_cloud:
+  capture_id: 440mm
+  path: outputs/workcell_scan/20260720_zivid_pin_drawer/insects-pins-440mm-filtered.ply
+  sha256: 303a9187fe1cb7c334205ec81ba76fdbfbda93090755e20134fc9596c2d94fbe
+  provenance_manifest: outputs/workcell_scan/20260720_zivid_pin_drawer/inspection.json
+  input_units: millimetres
+  expected_valid_points: 375793
+
+capture_registration:
+  status: passed_visual_fusion_only_not_metrology_or_robot_registration
+  secondary_to_primary_rotation:
+    - [-0.00800710, 0.99919625, 0.03927766]
+    - [-0.99991335, -0.00759007, -0.01075522]
+    - [-0.01044845, -0.03936037, 0.99917045]
+  secondary_to_primary_translation_mm:
+    [-1.357577943762, 100.389410679397, 1.162991137037]
+  conservative_uncertainty_translation_mm: 0.5
+  conservative_uncertainty_rotation_deg: 0.4
+  expected_combined_valid_points: 783239
+  expected_unique_voxels_before_cap_at_0_5mm: 133619
+  validation_thresholds:
+    rotation_determinant_abs_error_max: 1.0e-5
+    orthogonality_frobenius_error_max: 1.0e-5
+    sift_3d_inliers_min: 25
+    independent_ransac_median_mm_max: 1.0
+    independent_ransac_p95_mm_max: 1.5
+    foam_nn_median_mm_max: 0.35
+    foam_fraction_lt_1mm_min: 0.95
+    nonplane_nn_median_mm_max: 0.4
+    nonplane_fraction_lt_1mm_min: 0.93
+    rim_nn_median_mm_max: 0.4
+    rim_fraction_lt_1mm_min: 0.95
+    full_source_to_target_nn_median_mm_max: 0.5
+    full_source_to_target_fraction_lt_1mm_min: 0.9
+  evidence: outputs/workcell_scan/20260720_zivid_pin_drawer/inspection.json
+  evidence_section: capture_registration
+
+scan_derived_drawer_geometry:
+  status: provisional_outer_top_rim_only
+  frame: zivid_440mm_saved_local
+  outer_top_rim_size_xy_mm: [103.44, 137.49]
+  outer_top_rim_center_xy_mm: [51.14, 63.17]
+  short_axis_yaw_deg: 0.6
+  rim_height_above_foam_mm: 36.63
+  foam_plane_z_a_x_plus_b_y_plus_c_mm:
+    [-0.00733432, 0.03420422, 1.35508872]
+  dimension_uncertainty_mm: 0.5
+  center_uncertainty_mm: 0.75
+  yaw_uncertainty_deg: 0.4
+  underside_observed: false
+  inner_dimensions_verified: false
+  table_or_robot_datum_observed: false
+  visual_only: true
+  collision_qualified: false
+  evidence: outputs/workcell_scan/20260720_zivid_pin_drawer/inspection.json
+  evidence_section: scan_derived_drawer_geometry
+  visual_top_rim_outline:
+    enabled: true
+    prim_path: /Workcell/ProvisionalDrawerOuterTopRim
+    geometry_type: basis_curves_top_rim_outline
+    display_color_rgb: [255, 145, 35]
+    opacity: 0.9
+    line_width_m: 0.0015
+    purpose: guide
+    collision_enabled: false
+
+scan_to_base:
+  # The scan's fitted foam plane is levelled and its measured XYZ-box centre is
+  # placed at the old synthetic tray centre. This is a visual starting pose,
+  # not a measured relationship to Watson.
+  translation_xyz_m: [0.4419859013, -0.0472623387, -0.0007622752]
+  quaternion_xyzw: [-0.0049217565, -0.0016712426, 0.0, 0.9999864915]
+  provisional_target_center_xyz_m: [0.5, 0.0, 0.0]
+  registration_status: provisional_not_measured
+  frame_id: base
+
+robot:
+  asset_profile: watson_qc_nominal
+  asset_path: generated/isaac/6.0.1-watson-qc-10mm/tm5s_with_2fg7/tm5s_with_2fg7.usda
+  asset_sha256: d05dee28e5bd81ce4564f6ef52f7c2084f1020e1db81d215e834875fca5aa0bc
+  source_urdf: generated/tool_profiles/watson_qc_nominal/cumotion/tm5s_with_2fg7.urdf
+  source_urdf_sha256: ee7dadbee3e898152948c133f859f7bd085c93614fc8274549158cca10a18d03
+  import_report: outputs/isaac_sim/6.0.1/watson_qc_10mm_import_report.json
+  import_report_sha256: 8f62dc63514f8840a753abb629f2dcc83dfa6e2294594e7256b99e7945f11bc3
+  tool_metadata: generated/tool_profiles/watson_qc_nominal/tm5s_with_2fg7_metadata.json
+  tool_metadata_sha256: 7d35a8b32f91b2850e8a3ced05d221508e09a6a8225f34f5c15f509518c52017
+  quick_changer_assembly_type: single_standard_robot_side
+  quick_changer_revision_status: physically_confirmed_qc_r_v3_ip67
+  quick_changer_keyed_yaw_status: physical_clock_features_confirmed_numeric_working_cad_registration_pending
+  pin_grasp_tcp_status: user_selected_10mm_cad_relative_baseline_not_physically_calibrated
+  controller_tool_settings_status: observed_bare_robot_end_flange_zero_tcp_payload_and_cog
+  controller_tool_audit: outputs/watson_controller_tool_audit/20260720T114000Z_read_only.json
+  controller_tool_audit_sha256: 3baf19ab6ca1cffb19838c9d2d1fedd0d06a064b5b81a89e593f97ec628343a9
+  joint_names: [joint_1, joint_2, joint_3, joint_4, joint_5, joint_6]
+  # Selected pregrasp endpoint from the validated camera-free synthetic plan.
+  # This is only a useful viewing pose for the provisional scan placement.
+  display_joint_positions:
+    [0.0595490008, 0.1370110033, 1.9143849788, -0.4205261058, 1.6051591304, 3.2002552432]
+  display_pose_source: outputs/synthetic_pick/live_20260714/synthetic_pick_plan.json
+
+application_grasp_visual:
+  enabled: true
+  status: user_selected_10mm_baseline_visual_only
+  parent_frame: onrobot_2fg7_origin
+  visual_root_name: ApplicationPinGuide
+  bare_section:
+    display_color_rgb: [50, 220, 255]
+    line_width_m: 0.0012
+    opacity: 1.0
+  pinch_marker:
+    source: imported_gripper_tcp_sphere
+    display_color_name: blue
+    display_radius_m: 0.0015
+  specimen_near_boundary:
+    marker_radius_m: 0.012
+    marker_segments: 48
+    line_width_m: 0.0012
+    display_color_rgb: [255, 145, 35]
+    opacity: 0.9
+    meaning: axial_start_of_specimen_not_specimen_size_or_shape
+  purpose: guide
+  usd_render_purpose: default
+  visual_only: true
+  collision_enabled: false
+  adjustment: update the application baseline and regenerate the Watson profile for future specimens
+
+viewer:
+  camera_eye_xyz_m: [0.95, 0.78, 0.68]
+  camera_target_xyz_m: [0.35, 0.0, 0.20]
+  # Tool-relative close-up: across the inward jaws with a slight view from
+  # above the selected midpoint. It follows the static display pose.
+  application_camera_eye_offset_from_pinch_in_2fg7_frame_m: [0.0, -0.28, -0.025]
+  application_camera_target_offset_from_pinch_in_2fg7_frame_m: [0.0, 0.0, 0.0]
+  floor_top_z_m: -0.002
+
+scope:
+  visual_only: true
+  collision_enabled: false
+  registered_to_watson_base: false
+  captures_registered_to_each_other: true
+  captures_stitched: true
+  real_robot_commanded: false
+  note: >-
+    The 240 and 440 mm Zivid captures of the same unchanged drawer are fused
+    by a hash-bound rigid registration. Their internal scale and local overlap
+    are measured, but the fused scan pose relative to Watson is provisional.
+    Do not use it for collision planning or physical motion until scan-to-base
+    registration, table geometry, drawer pose, and tool/TCP measurements are
+    recorded.
+
+required_measurements:
+  - Watson base to table or mounting-plane transform
+  - drawer outer length, width, wall height, and foam depth
+  - drawer pose relative to Watson base
+  - numeric registration of the approved working QC CAD against the confirmed clock features
+  - physical calibration of the selected 10 mm application pin-grasp TCP

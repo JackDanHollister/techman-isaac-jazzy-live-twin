@@ -1,0 +1,20 @@
+title = "Techman live-twin secret scanning"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Human-readable physical-motion confirmation phrase"
+targetRules = ["generic-api-key"]
+condition = "AND"
+regexTarget = "line"
+paths = ['''scripts/run_watson_guarded_demo\.py''']
+regexes = ['''J6_QUALIFICATION_ARM_TOKEN\s*=\s*"MOVE_WATSON_J6_QUALIFICATION"''']
+
+[[allowlists]]
+description = "SHA-256 trajectory integrity fields in the public reference fixture"
+targetRules = ["generic-api-key"]
+condition = "AND"
+regexTarget = "line"
+paths = ['''reference/seven_pin/execution/retimed_seven_pin_air_replay\.json''']
+regexes = ['''"[a-z0-9_]*sha256"\s*:\s*"[a-f0-9]{64}"''']

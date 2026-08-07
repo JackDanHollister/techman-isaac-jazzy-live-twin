@@ -1,0 +1,404 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    defaultPrim = "tm5s_with_2fg7"
+    doc = """Sanitised Isaac Sim 6.0.1 URDF conversion bundle."""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "tm5s_with_2fg7"
+{
+    over "Geometry"
+    {
+        over "base" (
+            prepend apiSchemas = ["PhysicsArticulationRootAPI", "NewtonArticulationRootAPI"]
+        )
+        {
+            bool newton:selfCollisionEnabled = 0
+
+            over "link_0" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0, 0, 0)
+                float3 physics:diagonalInertia = (0.0011083329, 0.0011083329, 0.0018)
+                float physics:mass = 1
+                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                over "link_1" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0, 0, 0)
+                    float3 physics:diagonalInertia = (0.0084393, 0.013793964, 0.014241226)
+                    float physics:mass = 4.32
+                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                    over "link_2" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0, 0, 0)
+                        float3 physics:diagonalInertia = (0.029227499, 0.40691057, 0.41850758)
+                        float physics:mass = 9.796
+                        quatf physics:principalAxes = (1, 0, 0, 0)
+
+                        over "link_3" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (0, 0, 0)
+                            float3 physics:diagonalInertia = (0.004173275, 0.061909687, 0.06331861)
+                            float physics:mass = 2.778
+                            quatf physics:principalAxes = (1, 0, 0, 0)
+
+                            over "link_4" (
+                                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                            )
+                            {
+                                point3f physics:centerOfMass = (0, 0, 0)
+                                float3 physics:diagonalInertia = (0.0020460319, 0.0031718293, 0.0034789518)
+                                float physics:mass = 1.77
+                                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                                over "link_5" (
+                                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                                )
+                                {
+                                    point3f physics:centerOfMass = (0, 0, 0)
+                                    float3 physics:diagonalInertia = (0.0020460319, 0.0031718293, 0.0034789518)
+                                    float physics:mass = 1.77
+                                    quatf physics:principalAxes = (1, 0, 0, 0)
+
+                                    over "link_6" (
+                                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                                    )
+                                    {
+                                        point3f physics:centerOfMass = (0, 0, 0)
+                                        float3 physics:diagonalInertia = (0.0007034473, 0.0017110225, 0.0018544783)
+                                        float physics:mass = 0.72
+                                        quatf physics:principalAxes = (1, 0, 0, 0)
+
+                                        over "flange"
+                                        {
+                                            over "onrobot_qc_robot_side_link" (
+                                                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                                            )
+                                            {
+                                                point3f physics:centerOfMass = (0, 0, 0.004)
+                                                float3 physics:diagonalInertia = (0.000027913784, 0.000027913784, 0.000053235468)
+                                                float physics:mass = 0.06
+                                                quatf physics:principalAxes = (1, 0, 0, 0)
+
+                                                over "onrobot_2fg7_origin"
+                                                {
+                                                    over "onrobot_2fg7_base_link" (
+                                                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                                                    )
+                                                    {
+                                                        point3f physics:centerOfMass = (2.9023958e-24, -3.0434057e-24, 0.051999763)
+                                                        float3 physics:diagonalInertia = (0.0012483917, 0.0024488086, 0.0027394127)
+                                                        float physics:mass = 1.139997
+                                                        quatf physics:principalAxes = (0.5, 0.5, 0.5, 0.5)
+
+                                                        over "onrobot_2fg7_left_finger_link" (
+                                                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                                                        )
+                                                        {
+                                                            point3f physics:centerOfMass = (-0.0077257035, 0.02949104, 0.015234215)
+                                                            float3 physics:diagonalInertia = (1e-12, 1e-12, 1e-12)
+                                                            float physics:mass = 0.000001
+                                                            quatf physics:principalAxes = (1, 0, 0, 0)
+                                                        }
+
+                                                        over "onrobot_2fg7_right_finger_link" (
+                                                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                                                        )
+                                                        {
+                                                            point3f physics:centerOfMass = (0.029847704, 0.029496958, 0.015234215)
+                                                            float3 physics:diagonalInertia = (1e-12, 1e-12, 1e-12)
+                                                            float physics:mass = 0.000001
+                                                            quatf physics:principalAxes = (1, 0, 0, 0)
+                                                        }
+                                                    }
+
+                                                    over "gripper_tcp" (
+                                                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                                                    )
+                                                    {
+                                                        point3f physics:centerOfMass = (0, 0, 0)
+                                                        float3 physics:diagonalInertia = (6.4e-12, 6.4e-12, 6.4e-12)
+                                                        float physics:mass = 0.000001
+                                                        quatf physics:principalAxes = (1, 0, 0, 0)
+                                                    }
+                                                }
+
+                                                over "cylinder_1" (
+                                                    prepend apiSchemas = ["NewtonCollisionAPI"]
+                                                )
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        def PhysicsRevoluteJoint "joint_1" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 157
+            float drive:angular:physics:stiffness = 17.453293
+            uniform token drive:angular:physics:type = "acceleration"
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1>
+            point3f physics:localPos0 = (0, 0, 0.1484)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            custom float urdf:dynamics:damping = 0
+            custom float urdf:dynamics:friction = 0
+            custom float urdf:limit:effort = 157
+            custom float urdf:limit:velocity = 3.6651914
+        }
+
+        def PhysicsRevoluteJoint "joint_2" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 157
+            float drive:angular:physics:stiffness = 17.453293
+            uniform token drive:angular:physics:type = "acceleration"
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.5000002, -0.5, -0.5, -0.49999985)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            custom float urdf:dynamics:damping = 0
+            custom float urdf:dynamics:friction = 0
+            custom float urdf:limit:effort = 157
+            custom float urdf:limit:velocity = 3.6651914
+        }
+
+        def PhysicsRevoluteJoint "joint_3" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 157
+            float drive:angular:physics:stiffness = 17.453293
+            uniform token drive:angular:physics:type = "acceleration"
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3>
+            point3f physics:localPos0 = (0.429, 1.323489e-23, -4.135903e-24)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -158
+            float physics:upperLimit = 158
+            custom float urdf:dynamics:damping = 0
+            custom float urdf:dynamics:friction = 0
+            custom float urdf:limit:effort = 157
+            custom float urdf:limit:velocity = 3.6651914
+        }
+
+        def PhysicsRevoluteJoint "joint_4" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 54
+            float drive:angular:physics:stiffness = 17.453293
+            uniform token drive:angular:physics:type = "acceleration"
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4>
+            point3f physics:localPos0 = (0.386, 0, -0.1478)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071069, 7.0463136e-17, 5.551115e-17, 0.70710665)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            custom float urdf:dynamics:damping = 0
+            custom float urdf:dynamics:friction = 0
+            custom float urdf:limit:effort = 54
+            custom float urdf:limit:velocity = 3.9269907
+        }
+
+        def PhysicsRevoluteJoint "joint_5" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 54
+            float drive:angular:physics:stiffness = 17.453293
+            uniform token drive:angular:physics:type = "acceleration"
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5>
+            point3f physics:localPos0 = (0, -0.1315, -2.7755576e-17)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071069, 0.70710665, -4.878247e-11, 5.9994246e-11)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            custom float urdf:dynamics:damping = 0
+            custom float urdf:dynamics:friction = 0
+            custom float urdf:limit:effort = 54
+            custom float urdf:limit:velocity = 3.9269907
+        }
+
+        def PhysicsRevoluteJoint "joint_6" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 34
+            float drive:angular:physics:stiffness = 17.453293
+            uniform token drive:angular:physics:type = "acceleration"
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6>
+            point3f physics:localPos0 = (-5.293956e-23, -0.13495, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7071069, 0.70710665, -5.999424e-11, -4.8782485e-11)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            custom float urdf:dynamics:damping = 0
+            custom float urdf:dynamics:friction = 0
+            custom float urdf:limit:effort = 34
+            custom float urdf:limit:velocity = 7.8539815
+        }
+
+        def PhysicsPrismaticJoint "onrobot_2fg7_left_finger_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 100
+            float drive:linear:physics:maxForce = 140
+            float drive:linear:physics:stiffness = 1000
+            uniform token drive:linear:physics:type = "acceleration"
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_left_finger_link>
+            point3f physics:localPos0 = (0.032239, -0.029494, 0.12005)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0, 0, -1, 0)
+            quatf physics:localRot1 = (0, 0, -1, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.019
+            custom float urdf:limit:effort = 140
+            custom float urdf:limit:velocity = 0.225
+        }
+
+        def PhysicsPrismaticJoint "onrobot_2fg7_right_finger_joint" (
+            prepend apiSchemas = ["NewtonMimicAPI", "PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 100
+            float drive:linear:physics:maxForce = 140
+            float drive:linear:physics:stiffness = 1000
+            uniform token drive:linear:physics:type = "acceleration"
+            rel newton:mimicJoint = </tm5s_with_2fg7/Physics/onrobot_2fg7_left_finger_joint>
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link/onrobot_2fg7_right_finger_link>
+            point3f physics:localPos0 = (-0.054361, -0.029494, 0.12005)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.019
+            custom float urdf:limit:effort = 140
+            custom float urdf:limit:velocity = 0.225
+        }
+
+        def PhysicsFixedJoint "base_fixed_joint"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "flange_to_onrobot_qc_robot_side"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link>
+            point3f physics:localPos0 = (5.293956e-23, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "onrobot_2fg7_origin_to_base"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/onrobot_2fg7_base_link>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "onrobot_2fg7_origin_to_gripper_tcp"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tm5s_with_2fg7/Geometry/base/link_0/link_1/link_2/link_3/link_4/link_5/link_6/flange/onrobot_qc_robot_side_link/onrobot_2fg7_origin/gripper_tcp>
+            point3f physics:localPos0 = (0, 2.220446e-16, 0.15725)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+    }
+}

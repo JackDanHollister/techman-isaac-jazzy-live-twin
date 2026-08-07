@@ -1,0 +1,73 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Cell Size: 0.1
+      Enabled: true
+      Name: Floor Grid
+      Plane: XY
+      Plane Cell Count: 20
+      Value: true
+    - Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description Source: Topic
+      Description Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /watson/robot_description
+      Enabled: true
+      Name: Live Watson
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: moveit_rviz_plugin/Trajectory
+      Color Enabled: true
+      Enabled: true
+      Interrupt Display: true
+      Loop Animation: false
+      Name: Guarded Plan Preview
+      Robot Alpha: 0.5
+      Robot Color: 80; 160; 255
+      Robot Description: robot_description
+      Show Robot Collision: false
+      Show Robot Visual: true
+      Show Trail: false
+      State Display Time: 0.05 s
+      Trail Step Size: 1
+      Trajectory Topic: /display_planned_path
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 248; 248; 248
+    Fixed Frame: base
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 1.4
+      Focal Point:
+        X: 0.35
+        Y: 0.0
+        Z: 0.3
+      Name: Current View
+      Pitch: 0.55
+      Target Frame: base
+      Yaw: -0.7
+Window Geometry:
+  Height: 980
+  Width: 1400

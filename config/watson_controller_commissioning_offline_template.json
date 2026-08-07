@@ -1,0 +1,191 @@
+{
+  "offline_manifest_schema_version": 1,
+  "artifact_kind": "offline_controller_commissioning_template",
+  "status": "blocked_not_ready_not_applied",
+  "safety": {
+    "offline_only": true,
+    "controller_contacted": false,
+    "controller_write_authorized": false,
+    "controller_write_performed": false,
+    "controller_application_authorized": false,
+    "motion_commanded": false,
+    "applied_to_controller": false
+  },
+  "guard_relationship": {
+    "observed_watson_report_schema_version": 8,
+    "accepted_as_live_controller_tool_audit": false,
+    "can_bypass_live_ask_item_query": false,
+    "promotion_passed": false
+  },
+  "candidate_assembly_scope": {
+    "robot": "Watson TM5S",
+    "quick_changer": "OnRobot single standard robot-side Quick Changer",
+    "gripper": "OnRobot 2FG7",
+    "included": [
+      "single_standard_quick_changer_robot_side",
+      "integrated_2fg7"
+    ],
+    "excluded_from_candidate": [
+      "adapter_k",
+      "accessory",
+      "workpiece"
+    ],
+    "status": "direct_stack_physically_confirmed_remaining_tcp_payload_and_cad_registration_gates_apply"
+  },
+  "official_source_facts": {
+    "quick_changer_datasheet": {
+      "title": "OnRobot Quick Changers Datasheet v2.0",
+      "url": "https://onrobot.com/storage/datasheets/quick-changers/datasheet_quick_changers_v2.0_en.pdf",
+      "sha256": "67948af8a8cb3e21e99a87b4348f360b72f842f4fd5d68d71defe57631daeb15",
+      "technical_data_page": 3,
+      "mechanical_dimensions_page": 7,
+      "single_quick_changer_mass_kg": 0.06,
+      "flange_to_tool_interface_z_m": 0.0136,
+      "physical_body_height_m": 0.0161,
+      "repeatability_m": 0.00002
+    },
+    "installed_quick_changer_identity": {
+      "item_number": "109498",
+      "version": "QC-R v3",
+      "ip_classification": "IP67",
+      "label_observed_date": "2026-07-20",
+      "label_evidence": "user_read_installed_label",
+      "official_product_page": "https://b2b.onrobot.com/quick-changer-robot-side/",
+      "official_current_datasheet": "https://onrobot.com/storage/datasheets/quick-changers/datasheet_quick_changers_v2.0_en.pdf",
+      "official_current_datasheet_sha256": "67948af8a8cb3e21e99a87b4348f360b72f842f4fd5d68d71defe57631daeb15"
+    },
+    "quick_changer_cog_calculator": {
+      "title": "OnRobot TCP_COG_Calculator v1.4",
+      "url": "https://onrobot.dforigo.com/api/renderpoint/feeds/web/artifacts/NXD4QOYN1U6IC4HLd9mlGQ/download/TCP_COG_Calculator_v1.4.xlsx",
+      "sha256": "d0e7e757f2f726b816004fdbb85a6ef59748fb4df7f45993d14336f0fdb0563d",
+      "cells": "Data!P6:AA6",
+      "single_quick_changer_cog_xyz_m": [
+        0.0,
+        0.0,
+        0.004
+      ]
+    },
+    "techman_2fg7_manual": {
+      "title": "OnRobot User Manual for Techman Robots v6.6.0",
+      "filename": "User_Manual_For_Techman_Robots_Quick_Changer_2FG7_v6.6.0_EN.pdf",
+      "sha256": "c51f23b57611c17a9da2351b0b5eacd0f5a154124d5930a96a7c1a68cbf772cd",
+      "printed_page": 78,
+      "scope": "single_device_without_mount_adapter_or_workpiece",
+      "nominal_tcp_xyz_from_device_origin_m": [
+        0.0,
+        0.0,
+        0.125
+      ],
+      "mass_kg": 1.14,
+      "cog_xyz_from_device_origin_m": [
+        0.0,
+        0.0,
+        0.052
+      ]
+    }
+  },
+  "safe_precomputations": {
+    "scope": "nominal_direct_dry_stack_single_qc_plus_2fg7_without_adapter_accessory_or_workpiece",
+    "nominal_flange_to_2fg7_vendor_tcp_xyz_m": [
+      0.0,
+      0.0,
+      0.1386
+    ],
+    "nominal_dry_mass_kg": 1.2,
+    "nominal_dry_cog_xyz_from_robot_flange_m": [
+      0.0,
+      0.0,
+      0.06252
+    ],
+    "derivation": {
+      "tcp_z_m": "0.0136 + 0.125",
+      "mass_kg": "0.06 + 1.14",
+      "cog_z_m": "(0.06 * 0.004 + 1.14 * (0.0136 + 0.052)) / 1.20"
+    },
+    "status": "vendor_nominal_reference_only_not_a_calibrated_pinch_tcp_or_controller_approved_payload"
+  },
+  "application_grasp_baseline": {
+    "scope": "simulation_and_planning_reference_only_not_a_controller_entry",
+    "pin_axis_from_gripper_toward_specimen": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "lateral_alignment": "centred_between_inward_fingers",
+    "clear_pin_length_before_specimen_m": 0.01,
+    "grasp_point_on_clear_section": "midpoint",
+    "pinch_xyz_from_2fg7_device_origin_m": [
+      0.0,
+      0.0,
+      0.15725
+    ],
+    "pinch_xyz_from_robot_flange_m": [
+      0.0,
+      0.0,
+      0.17085
+    ],
+    "pinch_to_specimen_m": 0.005,
+    "specimen_geometry": "variable_not_fixed",
+    "remaining_pin_length_after_specimen_m": null,
+    "cable_geometry_included": false,
+    "status": "user_selected_10mm_cad_relative_baseline_not_physically_calibrated"
+  },
+  "required_physical_measurements": {
+    "quick_changer_revision": {
+      "item_number": "109498",
+      "value": "QC-R v3",
+      "ip_classification": "IP67",
+      "observed_date": "2026-07-20",
+      "evidence": "user_read_installed_label",
+      "status": "physically_confirmed"
+    },
+    "adapter_k_presence": {
+      "value": false,
+      "observed_date": "2026-07-20",
+      "evidence": "user_physical_inspection",
+      "status": "physically_confirmed_absent"
+    },
+    "quick_changer_keyed_yaw": {
+      "value_rad": null,
+      "clock_orientation": {
+        "viewpoint": "flange_facing_down_viewed_from_robot_wrist_toward_tool_and_floor",
+        "twelve_oclock_reference": "tm_eih_camera",
+        "quick_release_control": "12_oclock_facing_tm_eih_camera",
+        "cable_wrap": "3_oclock",
+        "cable_end_socket": "9_oclock"
+      },
+      "observed_date": "2026-07-20",
+      "status": "physical_clock_features_confirmed_numeric_approved_v2_working_cad_registration_pending"
+    },
+    "calibrated_pinch_tcp": {
+      "xyz_from_robot_flange_m": null,
+      "rpy_from_robot_flange_rad": null,
+      "status": "unknown_requires_physical_tcp_calibration"
+    },
+    "workpiece_payload": {
+      "mass_kg": null,
+      "cog_xyz_from_tcp_m": null,
+      "principal_moi_kg_m2": null,
+      "status": "unknown_requires_actual_workpiece_measurement"
+    },
+    "physical_dry_tool_principal_moi": {
+      "principal_moi_kg_m2": null,
+      "status": "unknown_simulation_proxy_not_accepted"
+    }
+  },
+  "controller_entry_placeholders": {
+    "tcp_name": null,
+    "tcp_value": null,
+    "mass_kg": null,
+    "principal_moi": null,
+    "mass_centre_frame": null,
+    "status": "intentionally_blank_not_a_controller_entry_sheet"
+  },
+  "promotion_blockers": [
+    "approved v2-labelled working CAD has not been registered to the confirmed physical clock orientation",
+    "application pinch TCP has not been physically calibrated",
+    "workpiece mass, centre of gravity, and moments of inertia are unknown",
+    "physical dry-tool principal moments of inertia are unknown",
+    "the schema-8 Watson guard must still read and approve the live controller records"
+  ]
+}

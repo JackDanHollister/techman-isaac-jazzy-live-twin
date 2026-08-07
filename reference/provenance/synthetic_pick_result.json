@@ -1,0 +1,1065 @@
+{
+  "seed": 1407,
+  "frames": {
+    "point_cloud_frame": "base",
+    "target_frame": "base",
+    "scanner_optical_to_target_frame": "identity in synthetic demo",
+    "tray_center_xyz": [
+      0.5,
+      0.0,
+      0.0
+    ]
+  },
+  "scene": {
+    "config": {
+      "tray_size_x": 0.46,
+      "tray_size_y": 0.31,
+      "tray_center_x": 0.5,
+      "tray_center_y": 0.0,
+      "tray_center_z": 0.0,
+      "foam_z": 0.0,
+      "tray_margin": 0.035,
+      "min_pin_spacing": 0.045,
+      "foam_points": 9000,
+      "tray_wall_points": 1200,
+      "background_noise_points": 500,
+      "pin_shaft_points": 160,
+      "pin_head_points": 70,
+      "specimen_points": 320,
+      "pin_radius": 0.00045,
+      "pin_head_radius": 0.002,
+      "pin_length_min": 0.038,
+      "pin_length_max": 0.057,
+      "max_pin_tilt_deg": 11.0,
+      "scanner_noise_std": 0.00035,
+      "foam_noise_std": 0.00025,
+      "body_height_min": 0.01,
+      "body_height_max": 0.02,
+      "body_radius_x_min": 0.006,
+      "body_radius_x_max": 0.015,
+      "body_radius_y_min": 0.003,
+      "body_radius_y_max": 0.008,
+      "body_radius_z_min": 0.002,
+      "body_radius_z_max": 0.005
+    },
+    "point_count": 15100,
+    "truth": [
+      {
+        "pin_id": 0,
+        "base": [
+          0.475796,
+          -0.002204,
+          0.0
+        ],
+        "axis_up": [
+          0.004769,
+          -0.015182,
+          0.999873
+        ],
+        "length_m": 0.044301,
+        "head": [
+          0.476007,
+          -0.002876,
+          0.044295
+        ],
+        "specimen_center": [
+          0.475861,
+          -0.00241,
+          0.013546
+        ],
+        "specimen_radii": [
+          0.007552,
+          0.005589,
+          0.004699
+        ]
+      },
+      {
+        "pin_id": 1,
+        "base": [
+          0.516123,
+          -0.103707,
+          0.0
+        ],
+        "axis_up": [
+          0.052053,
+          -0.033765,
+          0.998073
+        ],
+        "length_m": 0.047799,
+        "head": [
+          0.518611,
+          -0.105321,
+          0.047707
+        ],
+        "specimen_center": [
+          0.516696,
+          -0.104078,
+          0.010986
+        ],
+        "specimen_radii": [
+          0.013158,
+          0.007689,
+          0.002752
+        ]
+      },
+      {
+        "pin_id": 2,
+        "base": [
+          0.624062,
+          -0.107299,
+          0.0
+        ],
+        "axis_up": [
+          0.054031,
+          0.047652,
+          0.997402
+        ],
+        "length_m": 0.041805,
+        "head": [
+          0.626321,
+          -0.105307,
+          0.041696
+        ],
+        "specimen_center": [
+          0.625088,
+          -0.106394,
+          0.018937
+        ],
+        "specimen_radii": [
+          0.008869,
+          0.0041,
+          0.004966
+        ]
+      },
+      {
+        "pin_id": 3,
+        "base": [
+          0.585278,
+          0.069106,
+          0.0
+        ],
+        "axis_up": [
+          0.013872,
+          0.012737,
+          0.999823
+        ],
+        "length_m": 0.041248,
+        "head": [
+          0.58585,
+          0.069632,
+          0.041241
+        ],
+        "specimen_center": [
+          0.585528,
+          0.069335,
+          0.017972
+        ],
+        "specimen_radii": [
+          0.009595,
+          0.007738,
+          0.003135
+        ]
+      },
+      {
+        "pin_id": 4,
+        "base": [
+          0.624053,
+          0.013468,
+          0.0
+        ],
+        "axis_up": [
+          0.064137,
+          0.003913,
+          0.997933
+        ],
+        "length_m": 0.046135,
+        "head": [
+          0.627012,
+          0.013649,
+          0.046039
+        ],
+        "specimen_center": [
+          0.624796,
+          0.013514,
+          0.011553
+        ],
+        "specimen_radii": [
+          0.00868,
+          0.006704,
+          0.004988
+        ]
+      },
+      {
+        "pin_id": 5,
+        "base": [
+          0.337592,
+          0.034269,
+          0.0
+        ],
+        "axis_up": [
+          0.154895,
+          -0.039995,
+          0.987121
+        ],
+        "length_m": 0.040503,
+        "head": [
+          0.343866,
+          0.032649,
+          0.039982
+        ],
+        "specimen_center": [
+          0.339754,
+          0.033711,
+          0.013773
+        ],
+        "specimen_radii": [
+          0.00725,
+          0.004708,
+          0.002542
+        ]
+      },
+      {
+        "pin_id": 6,
+        "base": [
+          0.668506,
+          -0.021103,
+          0.0
+        ],
+        "axis_up": [
+          0.168582,
+          -0.056515,
+          0.984066
+        ],
+        "length_m": 0.05243,
+        "head": [
+          0.677345,
+          -0.024066,
+          0.051595
+        ],
+        "specimen_center": [
+          0.671715,
+          -0.022179,
+          0.018732
+        ],
+        "specimen_radii": [
+          0.007053,
+          0.003523,
+          0.004805
+        ]
+      },
+      {
+        "pin_id": 7,
+        "base": [
+          0.510955,
+          0.077,
+          0.0
+        ],
+        "axis_up": [
+          0.150094,
+          -0.026766,
+          0.988309
+        ],
+        "length_m": 0.042313,
+        "head": [
+          0.517306,
+          0.075868,
+          0.041819
+        ],
+        "specimen_center": [
+          0.513053,
+          0.076626,
+          0.013811
+        ],
+        "specimen_radii": [
+          0.006133,
+          0.003879,
+          0.004104
+        ]
+      }
+    ],
+    "pin_count": 8
+  },
+  "detection": {
+    "config": {
+      "plane_ransac_iterations": 90,
+      "plane_distance_threshold": 0.0016,
+      "min_height": 0.016,
+      "max_height": 0.075,
+      "cluster_radius": 0.014,
+      "min_cluster_points": 45,
+      "line_ransac_iterations": 90,
+      "line_inlier_radius": 0.0026,
+      "max_axis_angle_from_plane_normal_deg": 28.0,
+      "min_axis_length": 0.024,
+      "min_line_inliers": 35,
+      "max_radial_rms": 0.0022,
+      "duplicate_axis_distance": 0.012
+    },
+    "plane": {
+      "origin": [
+        0.499913,
+        0.000263,
+        1.2e-05
+      ],
+      "normal": [
+        -2.6e-05,
+        -3.3e-05,
+        1.0
+      ],
+      "u_axis": [
+        0.0,
+        -1.0,
+        -3.3e-05
+      ],
+      "v_axis": [
+        1.0,
+        -0.0,
+        2.6e-05
+      ],
+      "inlier_count": 9169
+    },
+    "detections": [
+      {
+        "detection_id": 0,
+        "point_on_axis": [
+          0.342623,
+          0.032965,
+          0.031943
+        ],
+        "axis_up": [
+          0.168625,
+          -0.050836,
+          0.984368
+        ],
+        "base": [
+          0.339858,
+          0.033798,
+          0.0158
+        ],
+        "head": [
+          0.344389,
+          0.032432,
+          0.042254
+        ],
+        "length_m": 0.026874,
+        "inlier_count": 175,
+        "cluster_point_count": 193,
+        "radial_rms_m": 0.001217,
+        "angle_from_plane_normal_deg": 10.145,
+        "score": 3864.647
+      },
+      {
+        "detection_id": 1,
+        "point_on_axis": [
+          0.4759,
+          -0.002764,
+          0.034176
+        ],
+        "axis_up": [
+          0.017103,
+          -0.030157,
+          0.999399
+        ],
+        "base": [
+          0.47559,
+          -0.002216,
+          0.016017
+        ],
+        "head": [
+          0.476112,
+          -0.003137,
+          0.046524
+        ],
+        "length_m": 0.030525,
+        "inlier_count": 187,
+        "cluster_point_count": 266,
+        "radial_rms_m": 0.001173,
+        "angle_from_plane_normal_deg": 1.986,
+        "score": 4868.206
+      },
+      {
+        "detection_id": 2,
+        "point_on_axis": [
+          0.515762,
+          0.076147,
+          0.032398
+        ],
+        "axis_up": [
+          0.178145,
+          -0.035343,
+          0.983369
+        ],
+        "base": [
+          0.512803,
+          0.076734,
+          0.016064
+        ],
+        "head": [
+          0.517833,
+          0.075736,
+          0.043832
+        ],
+        "length_m": 0.028238,
+        "inlier_count": 198,
+        "cluster_point_count": 245,
+        "radial_rms_m": 0.001326,
+        "angle_from_plane_normal_deg": 10.465,
+        "score": 4214.999
+      },
+      {
+        "detection_id": 3,
+        "point_on_axis": [
+          0.518223,
+          -0.105002,
+          0.03738
+        ],
+        "axis_up": [
+          0.062176,
+          -0.031178,
+          0.997578
+        ],
+        "base": [
+          0.516898,
+          -0.104337,
+          0.016122
+        ],
+        "head": [
+          0.518988,
+          -0.105385,
+          0.049647
+        ],
+        "length_m": 0.033607,
+        "inlier_count": 177,
+        "cluster_point_count": 180,
+        "radial_rms_m": 0.001133,
+        "angle_from_plane_normal_deg": 3.989,
+        "score": 5250.066
+      },
+      {
+        "detection_id": 4,
+        "point_on_axis": [
+          0.58568,
+          0.069543,
+          0.033649
+        ],
+        "axis_up": [
+          0.002628,
+          0.025257,
+          0.999678
+        ],
+        "base": [
+          0.585635,
+          0.069112,
+          0.016581
+        ],
+        "head": [
+          0.585706,
+          0.069798,
+          0.043733
+        ],
+        "length_m": 0.027161,
+        "inlier_count": 184,
+        "cluster_point_count": 442,
+        "radial_rms_m": 0.001194,
+        "angle_from_plane_normal_deg": 1.457,
+        "score": 4184.369
+      },
+      {
+        "detection_id": 5,
+        "point_on_axis": [
+          0.625808,
+          -0.105673,
+          0.032342
+        ],
+        "axis_up": [
+          0.059616,
+          0.037412,
+          0.99752
+        ],
+        "base": [
+          0.624852,
+          -0.106272,
+          0.016358
+        ],
+        "head": [
+          0.626514,
+          -0.10523,
+          0.044159
+        ],
+        "length_m": 0.02787,
+        "inlier_count": 199,
+        "cluster_point_count": 436,
+        "radial_rms_m": 0.001288,
+        "angle_from_plane_normal_deg": 4.038,
+        "score": 4307.154
+      },
+      {
+        "detection_id": 6,
+        "point_on_axis": [
+          0.626426,
+          0.013518,
+          0.036176
+        ],
+        "axis_up": [
+          0.063697,
+          0.007991,
+          0.997937
+        ],
+        "base": [
+          0.625143,
+          0.013357,
+          0.016078
+        ],
+        "head": [
+          0.627192,
+          0.013614,
+          0.048178
+        ],
+        "length_m": 0.032166,
+        "inlier_count": 179,
+        "cluster_point_count": 191,
+        "radial_rms_m": 0.001222,
+        "angle_from_plane_normal_deg": 3.682,
+        "score": 4712.561
+      },
+      {
+        "detection_id": 7,
+        "point_on_axis": [
+          0.674845,
+          -0.023258,
+          0.038075
+        ],
+        "axis_up": [
+          0.187351,
+          -0.054672,
+          0.98077
+        ],
+        "base": [
+          0.670648,
+          -0.022033,
+          0.016106
+        ],
+        "head": [
+          0.677883,
+          -0.024145,
+          0.05398
+        ],
+        "length_m": 0.038617,
+        "inlier_count": 219,
+        "cluster_point_count": 443,
+        "radial_rms_m": 0.001323,
+        "angle_from_plane_normal_deg": 11.255,
+        "score": 6392.464
+      }
+    ],
+    "detection_count": 8
+  },
+  "alignment": {
+    "config": {
+      "grip_below_head": 0.004,
+      "pregrasp_clearance": 0.045,
+      "lift_distance": 0.03,
+      "centerline_visual_length": 0.075
+    },
+    "notes": [
+      "Targets are virtual gripper pinch-center TCP poses.",
+      "A real flange->gripper_tcp transform must be added before hardware use.",
+      "Pregrasp/grasp/lift positions are expressed in the configured target frame."
+    ],
+    "targets": [
+      {
+        "detection_id": 0,
+        "frame_id": "base",
+        "tcp_model": "virtual_gripper_pinch_center",
+        "convention": "tool local +Z points downward along approach, opposite pin_axis_up",
+        "grip_point": [
+          0.343715,
+          0.032636,
+          0.038316
+        ],
+        "pregrasp_position": [
+          0.351303,
+          0.030348,
+          0.082613
+        ],
+        "grasp_position": [
+          0.343715,
+          0.032636,
+          0.038316
+        ],
+        "lift_position": [
+          0.348774,
+          0.03111,
+          0.067847
+        ],
+        "tool_z_axis_robot": [
+          -0.168625,
+          0.050836,
+          -0.984368
+        ],
+        "pin_axis_up": [
+          0.168625,
+          -0.050836,
+          0.984368
+        ],
+        "quaternion_xyzw": [
+          -0.702815,
+          0.705858,
+          0.077806,
+          -0.041977
+        ],
+        "rotation_matrix_row_major": [
+          -0.008578,
+          -0.985643,
+          -0.168625,
+          -0.998707,
+          -6e-06,
+          0.050836,
+          -0.050107,
+          0.168843,
+          -0.984368
+        ]
+      },
+      {
+        "detection_id": 1,
+        "frame_id": "base",
+        "tcp_model": "virtual_gripper_pinch_center",
+        "convention": "tool local +Z points downward along approach, opposite pin_axis_up",
+        "grip_point": [
+          0.476043,
+          -0.003016,
+          0.042526
+        ],
+        "pregrasp_position": [
+          0.476813,
+          -0.004373,
+          0.087499
+        ],
+        "grasp_position": [
+          0.476043,
+          -0.003016,
+          0.042526
+        ],
+        "lift_position": [
+          0.476556,
+          -0.003921,
+          0.072508
+        ],
+        "tool_z_axis_robot": [
+          -0.017103,
+          0.030157,
+          -0.999399
+        ],
+        "pin_axis_up": [
+          0.017103,
+          -0.030157,
+          0.999399
+        ],
+        "quaternion_xyzw": [
+          -0.706909,
+          0.707092,
+          0.016712,
+          0.004614
+        ],
+        "rotation_matrix_row_major": [
+          -0.000515,
+          -0.999854,
+          -0.017103,
+          -0.999545,
+          -1e-06,
+          0.030157,
+          -0.030153,
+          0.017111,
+          -0.999399
+        ]
+      },
+      {
+        "detection_id": 2,
+        "frame_id": "base",
+        "tcp_model": "virtual_gripper_pinch_center",
+        "convention": "tool local +Z points downward along approach, opposite pin_axis_up",
+        "grip_point": [
+          0.517121,
+          0.075878,
+          0.039899
+        ],
+        "pregrasp_position": [
+          0.525137,
+          0.074287,
+          0.08415
+        ],
+        "grasp_position": [
+          0.517121,
+          0.075878,
+          0.039899
+        ],
+        "lift_position": [
+          0.522465,
+          0.074818,
+          0.0694
+        ],
+        "tool_z_axis_robot": [
+          -0.178145,
+          0.035343,
+          -0.983369
+        ],
+        "pin_axis_up": [
+          0.178145,
+          -0.035343,
+          0.983369
+        ],
+        "quaternion_xyzw": [
+          -0.703044,
+          0.705276,
+          0.075715,
+          -0.05082
+        ],
+        "rotation_matrix_row_major": [
+          -0.006294,
+          -0.983984,
+          -0.178145,
+          -0.999375,
+          -6e-06,
+          0.035343,
+          -0.034778,
+          0.178257,
+          -0.983369
+        ]
+      },
+      {
+        "detection_id": 3,
+        "frame_id": "base",
+        "tcp_model": "virtual_gripper_pinch_center",
+        "convention": "tool local +Z points downward along approach, opposite pin_axis_up",
+        "grip_point": [
+          0.518739,
+          -0.105261,
+          0.045657
+        ],
+        "pregrasp_position": [
+          0.521537,
+          -0.106664,
+          0.090548
+        ],
+        "grasp_position": [
+          0.518739,
+          -0.105261,
+          0.045657
+        ],
+        "lift_position": [
+          0.520604,
+          -0.106196,
+          0.075584
+        ],
+        "tool_z_axis_robot": [
+          -0.062176,
+          0.031178,
+          -0.997578
+        ],
+        "pin_axis_up": [
+          0.062176,
+          -0.031178,
+          0.997578
+        ],
+        "quaternion_xyzw": [
+          -0.706336,
+          0.707021,
+          0.03302,
+          -0.010982
+        ],
+        "rotation_matrix_row_major": [
+          -0.001937,
+          -0.998063,
+          -0.062176,
+          -0.999514,
+          -2e-06,
+          0.031178,
+          -0.031118,
+          0.062206,
+          -0.997578
+        ]
+      },
+      {
+        "detection_id": 4,
+        "frame_id": "base",
+        "tcp_model": "virtual_gripper_pinch_center",
+        "convention": "tool local +Z points downward along approach, opposite pin_axis_up",
+        "grip_point": [
+          0.585696,
+          0.069697,
+          0.039734
+        ],
+        "pregrasp_position": [
+          0.585814,
+          0.070834,
+          0.08472
+        ],
+        "grasp_position": [
+          0.585696,
+          0.069697,
+          0.039734
+        ],
+        "lift_position": [
+          0.585775,
+          0.070455,
+          0.069724
+        ],
+        "tool_z_axis_robot": [
+          -0.002628,
+          -0.025257,
+          -0.999678
+        ],
+        "pin_axis_up": [
+          0.002628,
+          0.025257,
+          0.999678
+        ],
+        "quaternion_xyzw": [
+          0.707062,
+          -0.707038,
+          0.008001,
+          0.00986
+        ],
+        "rotation_matrix_row_major": [
+          6.6e-05,
+          -0.999997,
+          -0.002628,
+          -0.999681,
+          -0.0,
+          -0.025257,
+          0.025257,
+          0.002629,
+          -0.999678
+        ]
+      },
+      {
+        "detection_id": 5,
+        "frame_id": "base",
+        "tcp_model": "virtual_gripper_pinch_center",
+        "convention": "tool local +Z points downward along approach, opposite pin_axis_up",
+        "grip_point": [
+          0.626275,
+          -0.105379,
+          0.040169
+        ],
+        "pregrasp_position": [
+          0.628958,
+          -0.103696,
+          0.085057
+        ],
+        "grasp_position": [
+          0.626275,
+          -0.105379,
+          0.040169
+        ],
+        "lift_position": [
+          0.628064,
+          -0.104257,
+          0.070094
+        ],
+        "tool_z_axis_robot": [
+          -0.059616,
+          -0.037412,
+          -0.99752
+        ],
+        "pin_axis_up": [
+          0.059616,
+          0.037412,
+          0.99752
+        ],
+        "quaternion_xyzw": [
+          0.707064,
+          -0.706273,
+          -0.007874,
+          0.034322
+        ],
+        "rotation_matrix_row_major": [
+          0.002234,
+          -0.998219,
+          -0.059616,
+          -0.9993,
+          -2e-06,
+          -0.037412,
+          0.037346,
+          0.059658,
+          -0.99752
+        ]
+      },
+      {
+        "detection_id": 6,
+        "frame_id": "base",
+        "tcp_model": "virtual_gripper_pinch_center",
+        "convention": "tool local +Z points downward along approach, opposite pin_axis_up",
+        "grip_point": [
+          0.626937,
+          0.013582,
+          0.044186
+        ],
+        "pregrasp_position": [
+          0.629804,
+          0.013941,
+          0.089094
+        ],
+        "grasp_position": [
+          0.626937,
+          0.013582,
+          0.044186
+        ],
+        "lift_position": [
+          0.628848,
+          0.013821,
+          0.074124
+        ],
+        "tool_z_axis_robot": [
+          -0.063697,
+          -0.007991,
+          -0.997937
+        ],
+        "pin_axis_up": [
+          0.063697,
+          0.007991,
+          0.997937
+        ],
+        "quaternion_xyzw": [
+          0.706833,
+          -0.706651,
+          -0.019708,
+          0.025356
+        ],
+        "rotation_matrix_row_major": [
+          0.000511,
+          -0.997969,
+          -0.063697,
+          -0.999968,
+          -2e-06,
+          -0.007991,
+          0.007974,
+          0.063699,
+          -0.997937
+        ]
+      },
+      {
+        "detection_id": 7,
+        "frame_id": "base",
+        "tcp_model": "virtual_gripper_pinch_center",
+        "convention": "tool local +Z points downward along approach, opposite pin_axis_up",
+        "grip_point": [
+          0.677134,
+          -0.023926,
+          0.050057
+        ],
+        "pregrasp_position": [
+          0.685564,
+          -0.026386,
+          0.094192
+        ],
+        "grasp_position": [
+          0.677134,
+          -0.023926,
+          0.050057
+        ],
+        "lift_position": [
+          0.682754,
+          -0.025566,
+          0.07948
+        ],
+        "tool_z_axis_robot": [
+          -0.187351,
+          0.054672,
+          -0.98077
+        ],
+        "pin_axis_up": [
+          0.187351,
+          -0.054672,
+          0.98077
+        ],
+        "quaternion_xyzw": [
+          -0.701877,
+          0.705517,
+          0.08586,
+          -0.047359
+        ],
+        "rotation_matrix_row_major": [
+          -0.010252,
+          -0.982239,
+          -0.187351,
+          -0.998504,
+          -6e-06,
+          0.054672,
+          -0.053702,
+          0.187632,
+          -0.98077
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "truth_count": 8,
+    "detection_count": 8,
+    "matched_count": 8,
+    "missed_count": 0,
+    "false_positive_count": 0,
+    "false_positive_detection_ids": [],
+    "mean_angular_error_deg": 0.924,
+    "mean_axis_lateral_error_m": 0.000149,
+    "mean_head_error_m": 0.002277,
+    "matches": [
+      {
+        "truth_id": 0,
+        "detection_id": 1,
+        "angular_error_deg": 1.112,
+        "axis_lateral_error_m": 0.000204,
+        "head_error_m": 0.002246
+      },
+      {
+        "truth_id": 1,
+        "detection_id": 3,
+        "angular_error_deg": 0.599,
+        "axis_lateral_error_m": 0.000255,
+        "head_error_m": 0.001978
+      },
+      {
+        "truth_id": 2,
+        "detection_id": 5,
+        "angular_error_deg": 0.668,
+        "axis_lateral_error_m": 4.8e-05,
+        "head_error_m": 0.002471
+      },
+      {
+        "truth_id": 3,
+        "detection_id": 4,
+        "angular_error_deg": 0.964,
+        "axis_lateral_error_m": 0.000183,
+        "head_error_m": 0.002502
+      },
+      {
+        "truth_id": 4,
+        "detection_id": 6,
+        "angular_error_deg": 0.235,
+        "axis_lateral_error_m": 6.8e-05,
+        "head_error_m": 0.002147
+      },
+      {
+        "truth_id": 5,
+        "detection_id": 0,
+        "angular_error_deg": 1.015,
+        "axis_lateral_error_m": 0.000165,
+        "head_error_m": 0.002341
+      },
+      {
+        "truth_id": 6,
+        "detection_id": 7,
+        "angular_error_deg": 1.097,
+        "axis_lateral_error_m": 9.8e-05,
+        "head_error_m": 0.002446
+      },
+      {
+        "truth_id": 7,
+        "detection_id": 2,
+        "angular_error_deg": 1.704,
+        "axis_lateral_error_m": 0.00017,
+        "head_error_m": 0.002086
+      }
+    ]
+  }
+}

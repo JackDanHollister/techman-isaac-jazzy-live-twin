@@ -1,0 +1,218 @@
+{
+  "generated_urdf": "reference/seven_pin/source/tm5s_with_2fg7.urdf",
+  "source_tm5s_urdf": "tm2_ws/install/tm_description/share/tm_description/xacro/tm5s.urdf.xacro",
+  "tool_model_config": "config/onrobot_2fg7_tool_model.json",
+  "tool_profile": "watson_qc_nominal",
+  "profile_description": "Watson candidate for the physically confirmed direct stack with a centred, configurable 10 mm bare-pin grasp baseline.",
+  "onrobot_vendor_dir": "vendor/onrobot_2fg7",
+  "gripper": "OnRobot 2FG7",
+  "finger_configuration": "inwards",
+  "finger_joints": "prismatic",
+  "finger_position_m": 0.0,
+  "finger_motion": {
+    "external_gap_open_m": 0.039,
+    "external_gap_closed_m": 0.001,
+    "per_finger_travel_m": 0.019,
+    "maximum_relative_gap_speed_m_s": 0.45,
+    "maximum_per_finger_speed_m_s": 0.225,
+    "recommended_initial_simulation_per_finger_speed_m_s": 0.0225,
+    "status": "official_gap_and_relative_speed_with_recorded_unenforced_simulation_recommendation"
+  },
+  "geometry_scope": {
+    "included": [
+      "robot_flange",
+      "quick_changer",
+      "2fg7_body",
+      "inward_fingers",
+      "application_pin_frames"
+    ],
+    "excluded": [
+      "cables",
+      "cable_routing",
+      "cable_wrap_geometry"
+    ],
+    "status": "user_selected_scope_2026_07_21"
+  },
+  "quick_changer_mode": "standard_robot_side_nominal",
+  "quick_changer_variant": "onrobot_109498_qc_r_v3",
+  "quick_changer_configuration": {
+    "assembly_type": "single_standard_robot_side",
+    "item_number": "109498",
+    "version": "QC-R v3",
+    "ip_classification": "IP67",
+    "installed_configuration_status": "single_qc_r_v3_direct_to_flange_adapter_k_absent",
+    "physical_clock_orientation": {
+      "viewpoint": "flange_facing_down_viewed_from_robot_wrist_toward_tool_and_floor",
+      "twelve_oclock_reference": "tm_eih_camera",
+      "quick_release_control": "12_oclock_facing_tm_eih_camera",
+      "cable_wrap": "3_oclock",
+      "cable_end_socket": "9_oclock",
+      "status": "physically_confirmed_relative_orientation_numeric_approved_v2_working_cad_registration_pending",
+      "observed_date": "2026-07-20"
+    },
+    "flange_to_tool_interface_z_m": 0.0136,
+    "physical_body_height_m": 0.0161,
+    "body_diameter_m": 0.071,
+    "maximum_width_m": 0.08425,
+    "maximum_radial_reach_from_axis_m": 0.04875,
+    "inertia_proxy_radius_m": 0.042125,
+    "mass_kg": 0.06,
+    "cog_xyz_m": [
+      0.0,
+      0.0,
+      0.004
+    ],
+    "repeatability_m": 2e-05,
+    "geometry_status": "official_body_and_asymmetric_envelope_dimensions_with_conservative_proxy_and_user_approved_v2_labelled_working_cad_pending_integration",
+    "status": "installed_item_version_ip_and_relative_clock_orientation_physically_confirmed_approved_v2_working_cad_registration_pending",
+    "installed_identity_source": {
+      "label_observation": "User read item/cl 109498 and IP 67 from the installed label on 2026-07-20.",
+      "official_product_page": "https://b2b.onrobot.com/quick-changer-robot-side/",
+      "official_current_datasheet": "https://onrobot.com/storage/datasheets/quick-changers/datasheet_quick_changers_v2.0_en.pdf",
+      "official_current_datasheet_sha256": "67948af8a8cb3e21e99a87b4348f360b72f842f4fd5d68d71defe57631daeb15",
+      "catalogue_mapping": "Item 109498 = QC-R v3; Quick Changer IP classification = 67"
+    },
+    "source": {
+      "title": "OnRobot Quick Changers Datasheet v2.0",
+      "url": "https://onrobot.com/storage/datasheets/quick-changers/datasheet_quick_changers_v2.0_en.pdf",
+      "sha256": "67948af8a8cb3e21e99a87b4348f360b72f842f4fd5d68d71defe57631daeb15",
+      "technical_data_page": 3,
+      "mechanical_dimensions_page": 7
+    },
+    "cog_source": {
+      "title": "OnRobot TCP_COG_Calculator v1.4",
+      "url": "https://onrobot.dforigo.com/api/renderpoint/feeds/web/artifacts/NXD4QOYN1U6IC4HLd9mlGQ/download/TCP_COG_Calculator_v1.4.xlsx",
+      "sha256": "d0e7e757f2f726b816004fdbb85a6ef59748fb4df7f45993d14336f0fdb0563d",
+      "cells": "Data!P6:AA6"
+    }
+  },
+  "adapter_k": {
+    "part_number": "OR-101850",
+    "present": false,
+    "status": "physically_confirmed_absent",
+    "history": "Legacy project notes reported that Adapter K was removed; the user physically confirmed the current direct-flange installation on 2026-07-20.",
+    "physical_reverification_required": false,
+    "evidence": {
+      "kind": "user_physical_inspection",
+      "observed_date": "2026-07-20"
+    }
+  },
+  "mount_xyz_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mount_rpy_rad": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "device_origin_to_cad_origin_xyz_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "device_origin_to_cad_origin_rpy_rad": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "pin_grasp_tcp_xyz_from_device_origin_m": [
+    0.0,
+    0.0,
+    0.15725
+  ],
+  "pin_grasp_tcp_rpy_from_device_origin_rad": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "application_pin_baseline": {
+    "pin_axis_from_gripper_toward_specimen": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "lateral_alignment": "centred_between_inward_fingers",
+    "clear_pin_length_before_specimen_m": 0.01,
+    "grasp_point_on_clear_section": "midpoint",
+    "clear_section_start_xyz_from_2fg7_device_origin_m": [
+      0.0,
+      0.0,
+      0.15225
+    ],
+    "pinch_xyz_from_2fg7_device_origin_m": [
+      0.0,
+      0.0,
+      0.15725
+    ],
+    "specimen_near_point_xyz_from_2fg7_device_origin_m": [
+      0.0,
+      0.0,
+      0.16225
+    ],
+    "pinch_to_specimen_m": 0.005,
+    "specimen_geometry": "variable_not_fixed",
+    "remaining_pin_length_after_specimen_m": null,
+    "parameterization": "clear length, specimen geometry, and remaining pin length may be overridden per specimen",
+    "coordinate_status": "vendored_cad_relative_baseline_pending_physical_tcp_calibration",
+    "status": "user_selected_10mm_initial_baseline_2026_07_21"
+  },
+  "frame_xyz_from_flange_m": {
+    "onrobot_2fg7_origin": [
+      0.0,
+      0.0,
+      0.0136
+    ],
+    "onrobot_nominal_tcp": [
+      0.0,
+      0.0,
+      0.1386
+    ],
+    "finger_tip_plane": [
+      0.0,
+      0.0,
+      0.17585
+    ],
+    "pin_grasp_tcp": [
+      0.0,
+      0.0,
+      0.17085
+    ]
+  },
+  "frame_status": {
+    "mount": "direct_flange_qc_and_clock_features_confirmed_numeric_approved_v2_working_cad_yaw_pending",
+    "cad_registration": "user_approved_v2_labelled_working_approximation_pending_clock_registration_conservative_proxy_active",
+    "onrobot_nominal_tcp": "official_vendor_single_device_value",
+    "finger_tip_plane": "observed_vendored_cad_maximum",
+    "pin_grasp_tcp": "user_selected_10mm_cad_relative_baseline_not_physically_calibrated"
+  },
+  "dynamics": {
+    "profile": "provisional_sim_only_bare_qc_2fg7",
+    "total_mass_kg": 1.2,
+    "aggregate_cog_xyz_from_mount_m": [
+      0.0,
+      0.0,
+      0.06251999999999999
+    ],
+    "aggregate_inertia_at_cog_tool_axes_kg_m2": {
+      "ixx": 0.0026930187043749994,
+      "ixy": -0.0,
+      "ixz": 0.0,
+      "iyy": 0.002983623704374999,
+      "iyz": 0.0,
+      "izz": 0.00130163046875
+    },
+    "status": "official_component_masses_and_cogs_with_uniform_box_cylinder_inertia_proxy"
+  },
+  "primary_application_tcp_link": "pin_grasp_tcp",
+  "compatibility_tcp_link": "gripper_tcp",
+  "moveit_planning_tip": "flange",
+  "warnings": [
+    "Simulation/dry-run model only; never copy proxy inertia into Watson's controller settings.",
+    "Quick Changer and 2FG7 CoGs are vendor presets; proxy inertias remain simulation-only.",
+    "Mount yaw remains physically unverified; the pin-grasp frame is a user-selected 10 mm CAD-relative baseline, not a calibrated TCP.",
+    "The CAD fingertip plane is a mesh measurement, not the OnRobot nominal TCP.",
+    "Finger links use tiny surrogate masses and are not a contact-dynamics model."
+  ]
+}

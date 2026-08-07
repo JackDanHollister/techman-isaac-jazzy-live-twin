@@ -1,0 +1,79 @@
+format_version: 1
+
+scope:
+  mode: isaac_only_seven_pin_verticalization
+  ros_used: false
+  watson_connected: false
+  real_robot_commanded: false
+  contact_physics_simulated: false
+  physical_camera_or_depth_used: false
+
+multi_pin_plan:
+  path: reference/seven_pin/multi_pin_verticalization_plan.json
+  sha256: 0c5cc66bd54510bc92e92fefc727555abfdf157e541e67755cdccaea565b2c5a
+  specimen_ids: [1, 2, 3, 4, 5, 6, 7]
+  source_result: outputs/synthetic_pick_seed_1407/result.json
+  source_result_sha256: 253aef44c0b9a8620b59bcf8bffb90545e1fce0cb6f3b645807442e9a21138d0
+  placement: world_positive_z_at_source_or_nearby_reachable_base
+  destination_base_overrides_m:
+    5: [0.40, 0.00, 0.0]
+    7: [0.45, -0.05, 0.0]
+
+articulated_asset:
+  profile: watson_qc_articulated_2fg7
+  usd: reference/seven_pin/isaac/tm5s_with_2fg7/tm5s_with_2fg7.usda
+  import_report: reference/seven_pin/isaac_import_report.json
+  import_report_sha256: 9374c5e9ed5f80d2785d84d2eb1af0951f2c14a7bbc12c5e744119f5a081368c
+  staged_manifest: reference/seven_pin/staged_asset_manifest.json
+  staged_manifest_sha256: 0689cad1e8260bef7a1139e1e49406f065523318fd9ad3e3dfc6586cc6892df8
+  tool_metadata: reference/seven_pin/tool_metadata.json
+  tool_metadata_sha256: 1896c6b20d45246ef64b5ded8b3390614f75adeeedc5848f906c1e4f1e8b91cd
+  expected_dof_names:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - onrobot_2fg7_left_finger_joint
+    - onrobot_2fg7_right_finger_joint
+
+gripper_motion:
+  leader_joint: onrobot_2fg7_left_finger_joint
+  mimic_joint: onrobot_2fg7_right_finger_joint
+  open_position_m: 0.0
+  closed_position_m: 0.019
+  open_gap_m: 0.039
+  closed_gap_m: 0.001
+  per_finger_speed_m_s: 0.0225
+  hold_seconds: 0.30
+
+payload_visual:
+  attachment_mode: kinematic_visual_follow
+  root_prim_prefix: /MultiPinCycle/Payload_
+  clear_pin_length_m: 0.010
+  pinch_to_specimen_m: 0.005
+  pin_radius_m: 0.0004
+  clear_start_z_from_pinch_m: -0.005
+  specimen_near_z_from_pinch_m: 0.005
+  pin_head_center_z_from_pinch_m: -0.0072
+  pin_head_radius_m: 0.0022
+  specimen_center_z_from_pinch_m: 0.009
+  specimen_scale_xyz_m: [0.022, 0.014, 0.008]
+  specimen_colors_rgb:
+    - [0.72, 0.30, 0.08]
+    - [0.18, 0.48, 0.78]
+    - [0.74, 0.58, 0.10]
+    - [0.48, 0.24, 0.68]
+    - [0.16, 0.62, 0.42]
+    - [0.78, 0.22, 0.30]
+    - [0.32, 0.58, 0.76]
+  geometry_status: configurable_synthetic_10mm_baseline_not_a_contact_or_force_model
+
+viewer:
+  tray_camera_eye_xyz_m: [0.92, -0.58, 0.48]
+  tray_camera_target_xyz_m: [0.52, -0.01, 0.045]
+  workcell_camera_eye_xyz_m: [1.35, 1.20, 1.05]
+  workcell_camera_target_xyz_m: [0.25, 0.0, 0.40]
+  screenshot_phase: hold_ready
+  render_hz: 60.0

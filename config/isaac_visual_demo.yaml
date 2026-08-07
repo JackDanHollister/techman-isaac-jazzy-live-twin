@@ -1,0 +1,18 @@
+format_version: 1
+source_benchmark_bundle: outputs/cumotion_benchmark/20260714_camera_free_30x_tcp_inertia
+source_case: static_obstacle_detour
+source_forward_raw_path_float64_sha256: e5d75dde824a1542b0928bdb1e406318f036d1353676c904d0e86b6305f16012
+motion_scope: exact cuMotion raw knots with smooth interpolation along the same joint-space lines
+transition_seconds: 11.0
+hold_seconds: 0.5
+benchmark_obstacle:
+  position: [0.246469, -0.118321, 0.665250]
+  side_lengths: [0.12, 0.18, 0.16]
+waypoints:
+  q0: [-0.45, -0.35, 1.10, -0.40, 1.25, 0.30]
+  q1: [0.9948967722913981, -1.2400057447899648, 0.4267179782147749, 1.5482937191464963, -2.8325461317690683, -1.14659913151203]
+  q2: [0.9936092429040252, -0.9051729813522741, 0.7189765745937529, 1.3368275387324668, -2.24558298313015, -0.5847035964520533]
+  q3: [0.991576301766068, -0.3764896706611858, 1.1804375162447702, 1.0029335696576835, -1.3187990642265948, 0.30249987995843586]
+  q4: [0.8718, -0.4293, 2.1296, 0.4353, 1.092, -0.6501]
+forward_sequence: [q0, q1, q2, q3, q4]
+motion_sequence: [q0, q1, q2, q3, q4, q3, q2, q1, q0]

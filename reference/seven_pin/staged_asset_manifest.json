@@ -1,0 +1,63 @@
+{
+  "source_urdf": "reference/seven_pin/source/tm5s_with_2fg7.urdf",
+  "prepared_urdf": "reference/seven_pin/source/tm5s_with_2fg7.urdf",
+  "xrdf": null,
+  "tm_description_share": "tm2_ws/install/tm_description/share/tm_description",
+  "asset_mode": "isaac_articulated",
+  "moving_joints": [
+    "joint_1",
+    "joint_2",
+    "joint_3",
+    "joint_4",
+    "joint_5",
+    "joint_6",
+    "onrobot_2fg7_left_finger_joint",
+    "onrobot_2fg7_right_finger_joint"
+  ],
+  "tool_frame": "flange",
+  "tool_frames": [
+    "flange",
+    "onrobot_nominal_tcp",
+    "finger_tip_plane",
+    "pin_grasp_tcp",
+    "gripper_tcp"
+  ],
+  "quick_changer_collision_modeled": true,
+  "collision_sphere_count": null,
+  "sphere_radius_offset_m": 0.002,
+  "surface_coverage_margin_m": 0.001,
+  "surface_samples_per_link": 20000,
+  "sphere_coverage_audit_scope": "All collision-mesh vertices plus a deterministic sampled surface set; not a proof that the sphere union encloses every mesh point.",
+  "sphere_coverage_audit": {},
+  "removed_root_tags": [
+    "gazebo",
+    "ros2_control",
+    "transmission"
+  ],
+  "mesh_manifest": {
+    "package://tm_description/meshes/tm5s/visual/tm5s-base.obj": "meshes/tm_description/meshes/tm5s/visual/tm5s-base.obj",
+    "package://tm_description/meshes/tm5s/collision/tm5s-base_c.stl": "meshes/tm_description/meshes/tm5s/collision/tm5s-base_c.stl",
+    "package://tm_description/meshes/tm5s/visual/tm5s-j1.obj": "meshes/tm_description/meshes/tm5s/visual/tm5s-j1.obj",
+    "package://tm_description/meshes/tm5s/collision/tm5s-j1_c.stl": "meshes/tm_description/meshes/tm5s/collision/tm5s-j1_c.stl",
+    "package://tm_description/meshes/tm5s/visual/tm5s-a1.obj": "meshes/tm_description/meshes/tm5s/visual/tm5s-a1.obj",
+    "package://tm_description/meshes/tm5s/collision/tm5s-a1_c.stl": "meshes/tm_description/meshes/tm5s/collision/tm5s-a1_c.stl",
+    "package://tm_description/meshes/tm5s/visual/tm5s-a2.obj": "meshes/tm_description/meshes/tm5s/visual/tm5s-a2.obj",
+    "package://tm_description/meshes/tm5s/collision/tm5s-a2_c.stl": "meshes/tm_description/meshes/tm5s/collision/tm5s-a2_c.stl",
+    "package://tm_description/meshes/tm5s/visual/tm5s-j5.obj": "meshes/tm_description/meshes/tm5s/visual/tm5s-j5.obj",
+    "package://tm_description/meshes/tm5s/collision/tm5s-j5_c.stl": "meshes/tm_description/meshes/tm5s/collision/tm5s-j5_c.stl",
+    "package://tm_description/meshes/tm5s/visual/tm5s-j6.obj": "meshes/tm_description/meshes/tm5s/visual/tm5s-j6.obj",
+    "package://tm_description/meshes/tm5s/collision/tm5s-j6_c.stl": "meshes/tm_description/meshes/tm5s/collision/tm5s-j6_c.stl",
+    "package://tm_description/meshes/tm5s/visual/tm5s-io.obj": "meshes/tm_description/meshes/tm5s/visual/tm5s-io.obj",
+    "package://tm_description/meshes/tm5s/collision/tm5s-io_c.stl": "meshes/tm_description/meshes/tm5s/collision/tm5s-io_c.stl",
+    "vendor/onrobot_2fg7/meshes/base_link.stl": "meshes/onrobot_2fg7/meshes/base_link.stl",
+    "vendor/onrobot_2fg7/meshes/inwards/left_finger_link.stl": "meshes/onrobot_2fg7/meshes/inwards/left_finger_link.stl",
+    "vendor/onrobot_2fg7/meshes/inwards/right_finger_link.stl": "meshes/onrobot_2fg7/meshes/inwards/right_finger_link.stl"
+  },
+  "offline_only": true,
+  "warnings": [
+    "XRDF jerk limits are provisional offline values.",
+    "Mount yaw and application pin-grasp depth are uncalibrated.",
+    "Collision-sphere coverage is sample-audited, not a certified conservative enclosure.",
+    "2FG7/QC inertia values are simulation-only geometric proxies."
+  ]
+}

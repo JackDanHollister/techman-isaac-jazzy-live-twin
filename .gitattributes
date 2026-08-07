@@ -1,0 +1,2 @@
+# Preserve the verbatim composite upstream licence, including its whitespace.
+third_party/techman/LICENSE -whitespace

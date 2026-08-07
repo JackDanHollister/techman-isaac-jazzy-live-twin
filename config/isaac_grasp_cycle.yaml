@@ -1,0 +1,67 @@
+format_version: 1
+
+scope:
+  mode: isaac_only_kinematic_grasp_cycle
+  ros_used: false
+  watson_connected: false
+  real_robot_commanded: false
+  contact_physics_simulated: false
+  physical_camera_or_depth_used: false
+
+arm_choreography:
+  source_plan: outputs/synthetic_pick_seed_1407/synthetic_pick_plan.json
+  source_plan_sha256: ef51202d4dc8287c8ac0418c6915d3b52ded198638175c17b942f5cff36ca33c
+  source_profile: legacy_cad_dry_run
+  use: six_joint_visual_choreography_only
+  collision_clearance_status: applies_only_to_the_legacy_no_qc_source_plan_not_the_articulated_watson_presentation_asset
+
+articulated_asset:
+  profile: watson_qc_articulated_2fg7
+  usd: generated/isaac/6.0.1-watson-qc-10mm-grasp/tm5s_with_2fg7/tm5s_with_2fg7.usda
+  import_report: outputs/isaac_sim/6.0.1/watson_qc_10mm_grasp_import_report.json
+  import_report_sha256: 28fee613170c4ad2334e75f3d0aa2c5dcbe9707bc47d33061225458c57c592e9
+  staged_manifest: generated/tool_profiles/watson_qc_nominal/isaac_grasp_cycle/staged/asset_manifest.json
+  staged_manifest_sha256: b38daf7c1c387470ce3466efbed761e4fbe084c1daa449d1cc982875196ea2d0
+  tool_metadata: generated/tool_profiles/watson_qc_nominal/isaac_grasp_cycle/tm5s_with_2fg7_articulated_metadata.json
+  tool_metadata_sha256: 97ce1ae37a0cd0db2127c0e3d75ffc525b5e122ac90f4873280348569f69a2c2
+  expected_dof_names:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+    - onrobot_2fg7_left_finger_joint
+    - onrobot_2fg7_right_finger_joint
+
+gripper_motion:
+  leader_joint: onrobot_2fg7_left_finger_joint
+  mimic_joint: onrobot_2fg7_right_finger_joint
+  open_position_m: 0.0
+  closed_position_m: 0.019
+  open_gap_m: 0.039
+  closed_gap_m: 0.001
+  per_finger_speed_m_s: 0.0225
+  hold_seconds: 0.75
+
+payload_visual:
+  attachment_mode: kinematic_visual_follow
+  root_prim_path: /GraspCycle/Payload
+  clear_pin_length_m: 0.010
+  pinch_to_specimen_m: 0.005
+  pin_radius_m: 0.0004
+  clear_start_z_from_pinch_m: -0.005
+  specimen_near_z_from_pinch_m: 0.005
+  remaining_pin_end_z_from_pinch_m: 0.038
+  pin_head_center_z_from_pinch_m: -0.0072
+  pin_head_radius_m: 0.0022
+  specimen_center_z_from_pinch_m: 0.009
+  # A unit sphere of radius 0.5 scaled by this vector has these full dimensions.
+  specimen_scale_xyz_m: [0.022, 0.014, 0.008]
+  geometry_status: configurable_synthetic_10mm_baseline_not_a_contact_or_force_model
+
+viewer:
+  grasp_camera_eye_offset_from_pinch_m: [0.0, -0.28, -0.025]
+  grasp_camera_target_offset_from_pinch_m: [0.0, 0.0, 0.0]
+  screenshot_phase: hold_lift
+  render_hz: 60.0

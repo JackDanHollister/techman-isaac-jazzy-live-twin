@@ -1,0 +1,293 @@
+{
+  "format_version": 1,
+  "default_profile": "legacy_cad_dry_run",
+  "shared": {
+    "robot": "Watson TM5S",
+    "gripper": "OnRobot 2FG7",
+    "gripper_serial": "1000040068",
+    "finger_configuration": "inwards",
+    "adapter_k": {
+      "part_number": "OR-101850",
+      "present": false,
+      "status": "physically_confirmed_absent",
+      "history": "Legacy project notes reported that Adapter K was removed; the user physically confirmed the current direct-flange installation on 2026-07-20.",
+      "physical_reverification_required": false,
+      "evidence": {
+        "kind": "user_physical_inspection",
+        "observed_date": "2026-07-20"
+      }
+    },
+    "frames_from_2fg7_device_origin": {
+      "onrobot_nominal_tcp": {
+        "xyz_m": [0.0, 0.0, 0.125],
+        "rpy_rad": [0.0, 0.0, 0.0],
+        "status": "official_vendor_single_device_value"
+      }
+    },
+    "frames_from_cad_origin": {
+      "finger_tip_plane": {
+        "xyz_m": [0.0, 0.0, 0.16225],
+        "rpy_rad": [0.0, 0.0, 0.0],
+        "status": "observed_vendored_cad_maximum"
+      },
+      "inward_finger_contact_face": {
+        "axial_bounds_z_m": [0.11975, 0.15975],
+        "axial_length_m": 0.04,
+        "axial_center_z_m": 0.13975,
+        "lateral_center_xy_m": [0.0, 0.0],
+        "status": "observed_vendored_inward_mesh_contact_plane"
+      }
+    },
+    "geometry_scope": {
+      "included": [
+        "robot_flange",
+        "quick_changer",
+        "2fg7_body",
+        "inward_fingers",
+        "application_pin_frames"
+      ],
+      "excluded": ["cables", "cable_routing", "cable_wrap_geometry"],
+      "status": "user_selected_scope_2026_07_21"
+    },
+    "device_dynamics": {
+      "mass_kg": 1.14,
+      "cog_xyz_m": [0.0, 0.0, 0.052],
+      "uniform_box_proxy_dimensions_xyz_m": [0.09, 0.071, 0.144],
+      "status": "mass_and_cog_official_inertia_uniform_box_proxy_simulation_only"
+    },
+    "standard_quick_changer_robot_side": {
+      "assembly_type": "single_standard_robot_side",
+      "item_number": "109498",
+      "version": "QC-R v3",
+      "ip_classification": "IP67",
+      "installed_configuration_status": "single_qc_r_v3_direct_to_flange_adapter_k_absent",
+      "physical_clock_orientation": {
+        "viewpoint": "flange_facing_down_viewed_from_robot_wrist_toward_tool_and_floor",
+        "twelve_oclock_reference": "tm_eih_camera",
+        "quick_release_control": "12_oclock_facing_tm_eih_camera",
+        "cable_wrap": "3_oclock",
+        "cable_end_socket": "9_oclock",
+        "status": "physically_confirmed_relative_orientation_numeric_approved_v2_working_cad_registration_pending",
+        "observed_date": "2026-07-20"
+      },
+      "flange_to_tool_interface_z_m": 0.0136,
+      "physical_body_height_m": 0.0161,
+      "body_diameter_m": 0.071,
+      "maximum_width_m": 0.08425,
+      "maximum_radial_reach_from_axis_m": 0.04875,
+      "inertia_proxy_radius_m": 0.042125,
+      "mass_kg": 0.06,
+      "cog_xyz_m": [0.0, 0.0, 0.004],
+      "repeatability_m": 0.00002,
+      "geometry_status": "official_body_and_asymmetric_envelope_dimensions_with_conservative_proxy_and_user_approved_v2_labelled_working_cad_pending_integration",
+      "status": "installed_item_version_ip_and_relative_clock_orientation_physically_confirmed_approved_v2_working_cad_registration_pending",
+      "installed_identity_source": {
+        "label_observation": "User read item/cl 109498 and IP 67 from the installed label on 2026-07-20.",
+        "official_product_page": "https://b2b.onrobot.com/quick-changer-robot-side/",
+        "official_current_datasheet": "https://onrobot.com/storage/datasheets/quick-changers/datasheet_quick_changers_v2.0_en.pdf",
+        "official_current_datasheet_sha256": "67948af8a8cb3e21e99a87b4348f360b72f842f4fd5d68d71defe57631daeb15",
+        "catalogue_mapping": "Item 109498 = QC-R v3; Quick Changer IP classification = 67"
+      },
+      "source": {
+        "title": "OnRobot Quick Changers Datasheet v2.0",
+        "url": "https://onrobot.com/storage/datasheets/quick-changers/datasheet_quick_changers_v2.0_en.pdf",
+        "sha256": "67948af8a8cb3e21e99a87b4348f360b72f842f4fd5d68d71defe57631daeb15",
+        "technical_data_page": 3,
+        "mechanical_dimensions_page": 7
+      },
+      "cog_source": {
+        "title": "OnRobot TCP_COG_Calculator v1.4",
+        "url": "https://onrobot.dforigo.com/api/renderpoint/feeds/web/artifacts/NXD4QOYN1U6IC4HLd9mlGQ/download/TCP_COG_Calculator_v1.4.xlsx",
+        "sha256": "d0e7e757f2f726b816004fdbb85a6ef59748fb4df7f45993d14336f0fdb0563d",
+        "cells": "Data!P6:AA6"
+      }
+    },
+    "official_cad_visuals": {
+      "distribution_policy": "local_generated_cache_only_no_redistribution_permission_identified",
+      "output_units": "metres",
+      "integration_status": "reference_only_not_consumed_by_robot_model_fixed_outwards_2fg7_pose_mismatches_watson_inwards_state",
+      "installed_qc_cad_availability": {
+        "item_number": "109498",
+        "version": "QC-R v3",
+        "audit_date": "2026-07-20",
+        "official_catalogue_result": "no_item_tagged_standard_robot_side_qc_r_v3_or_109498_step_published_and_no_v2_v3_dimensional_delta_documented",
+        "retained_reference": "official_v2_labelled_robot_side_with_cable_holder_step_not_item_tagged",
+        "retained_reference_metadata": "https://onrobot.dforigo.com/api/renderpoint/feeds/web/artifacts/zRT86B1e_UKFJvYg7JDrMQ",
+        "project_decision_date": "2026-07-20",
+        "project_decision": "user_approved_v2_labelled_file_as_working_qc_r_v3_approximation",
+        "approved_use": "visual_and_orientation_model_after_clock_registration_with_published_dimension_proxy_retained_for_collision",
+        "status": "exact_installed_v3_mesh_unavailable_user_approved_v2_labelled_working_approximation_not_vendor_confirmed_exact"
+      },
+      "rights": {
+        "source": "https://onrobot.com/en/terms-of-use",
+        "status": "no_affirmative_cad_redistribution_permission_found_keep_source_and_derivatives_local_and_ignored"
+      },
+      "converter": {
+        "application": "Isaac Sim 6.0.1",
+        "extension": "omni.kit.converter.hoops_core 511.3.2",
+        "backend": "HOOPS Converter 10.6.1",
+        "tessellation_lod": 2,
+        "instancing_style": "none",
+        "composition_style": "monolithic",
+        "hidden_geometry": "omit",
+        "up_axis": "file_default"
+      },
+      "outputs": {
+        "directory": "generated/onrobot_official_visuals",
+        "two_fg7_mesh": "generated/onrobot_official_visuals/onrobot_2fg7_official_registered_m.stl",
+        "qc_robot_side_mesh": "generated/onrobot_official_visuals/onrobot_qc_robot_side_v2_official_registered_m.stl",
+        "manifest": "generated/onrobot_official_visuals/manifest.json"
+      },
+      "assets": {
+        "two_fg7": {
+          "title": "OnRobot 2FG7 v1 STEP",
+          "url": "https://onrobot.dforigo.com/api/renderpoint/feeds/web/artifacts/JbT_-HGEKkO01dDZaXBg9Q/download/2FG7_v1.STEP",
+          "sha256": "4aa791f431604588d854fa8f591002dbaf48fd7448c9eebe7b83533397d8aacd",
+          "step_header_filename": "107014.STEP",
+          "registration": {
+            "link_frame": "onrobot_2fg7_origin",
+            "source_origin_xyz_m": [0.05538741234022384, 0.2962418983776825, -0.14211630761241168],
+            "rotation_rows_source_to_link": [
+              [1.0, 0.0, 0.0],
+              [0.0, 0.0, -1.0],
+              [0.0, 1.0, 0.0]
+            ],
+            "expected_bounds_m": {
+              "minimum": [-0.045, -0.0394, -0.0132],
+              "maximum": [0.045, 0.0355, 0.14315]
+            },
+            "fixed_finger_pose": {
+              "orientation": "outwards",
+              "geometric_inner_gap_m": 0.0254,
+              "finger_axial_bounds_m": [0.09715, 0.14215],
+              "watson_archived_orientation": "inwards",
+              "current_inwards_collision_proxy_inner_gap_m": 0.039,
+              "current_inwards_collision_proxy_axial_bounds_m": [0.11725, 0.16225],
+              "comparison": {
+                "official_to_vendored_outwards_mean_bidirectional_surface_distance_m": 0.0001631,
+                "official_to_vendored_outwards_p95_surface_distance_m": 0.0003185,
+                "official_to_vendored_inwards_mean_bidirectional_surface_distance_m": 0.0063954
+              },
+              "status": "official_step_fixed_pose_does_not_match_watson_archived_inwards_state_or_current_fixed_collision_proxy_pose"
+            },
+            "status": "source_hash_specific_canonical_registration_not_installed_keyed_yaw",
+            "evidence": "The main 90 x 71 mm body begins at source Y=296.241898 mm; the integrated connector extends 13.2 mm behind that plane and the registered forward envelope is 143.15 mm, consistent with the vendor 144 mm device height."
+          }
+        },
+        "qc_robot_side": {
+          "title": "OnRobot Quick Changer robot side v2 with cable holder STEP",
+          "url": "https://onrobot.dforigo.com/api/renderpoint/feeds/web/artifacts/zRT86B1e_UKFJvYg7JDrMQ/download/Quick%20Changer%20Robot%20side_v2_with_cable_holder.STEP",
+          "sha256": "ac3cb44b90b27b172423400def5150a9af8b6e9338baf358f413118cbf5f38db",
+          "step_header_filename": "Quick Changer Robot side_1.STEP",
+          "registration": {
+            "link_frame": "robot_flange",
+            "source_origin_xyz_m": [0.0, 0.0, 0.0],
+            "rotation_rows_source_to_link": [
+              [1.0, 0.0, 0.0],
+              [0.0, 0.0, 1.0],
+              [0.0, -1.0, 0.0]
+            ],
+            "expected_bounds_m": {
+              "minimum": [-0.0355, -0.0601, -0.00258285],
+              "maximum": [0.0355, 0.048723, 0.0144735]
+            },
+            "status": "source_hash_specific_canonical_registration_v2_labelled_reference_not_item_tagged_or_confirmed_for_installed_109498_qc_r_v3",
+            "evidence": "After registration the cylindrical body spans -2.5 to +13.6 mm about the robot flange plane, preserving the vendor functional 13.6 mm flange-to-tool-interface offset and 16.1 mm physical body height. The catalogue does not item-tag this v2-labelled file or confirm it as exact item 109498 QC-R v3 geometry, so it remains reference-only."
+          }
+        }
+      }
+    },
+    "finger_motion": {
+      "external_gap_open_m": 0.039,
+      "external_gap_closed_m": 0.001,
+      "per_finger_travel_m": 0.019,
+      "maximum_relative_gap_speed_m_s": 0.45,
+      "maximum_per_finger_speed_m_s": 0.225,
+      "recommended_initial_simulation_per_finger_speed_m_s": 0.0225,
+      "status": "official_gap_and_relative_speed_with_recorded_unenforced_simulation_recommendation"
+    },
+    "surrogate_link_mass_kg": 0.000001,
+    "controller_commissioning": {
+      "latest_read_only_observation": {
+        "captured_utc": "2026-07-20T11:22:26.729957081+00:00",
+        "robot_ip": "192.0.2.23",
+        "active_tcp_name": "RobotEndFlange",
+        "tcp_value": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "mass_kg": 0.0,
+        "principal_moi": [0.0, 0.0, 0.0],
+        "mass_centre_frame": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "active_base_name": "RobotBase",
+        "base_value": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "motion_commanded": false,
+        "status": "failed_active_controller_tool_is_unconfigured_bare_flange"
+      },
+      "direct_dry_stack_candidate": {
+        "scope": "single_item_109498_qc_r_v3_robot_side_plus_integrated_2fg7_adapter_k_confirmed_absent_no_accessory_or_workpiece",
+        "tcp_xyz_from_robot_flange_m": [0.0, 0.0, 0.1386],
+        "mass_kg": 1.2,
+        "cog_xyz_from_robot_flange_m": [0.0, 0.0, 0.06252],
+        "calculation": "(0.06 kg * 0.004 m + 1.14 kg * (0.0136 m + 0.052 m)) / 1.20 kg",
+        "moi_status": "simulation_proxy_only_not_controller_approved",
+        "status": "physically_confirmed_direct_stack_vendor_nominal_candidate_not_physical_tcp_calibration_not_written_to_controller"
+      },
+      "promotion_gate": {
+        "passed": false,
+        "blockers": [
+          "active controller tool is RobotEndFlange with zero TCP and payload",
+          "approved v2-labelled working CAD has not been registered to the confirmed physical clock orientation",
+          "application pin-grasp TCP has not been physically calibrated",
+          "controller moments of inertia are not commissioned"
+        ]
+      }
+    },
+    "sources": {
+      "onrobot_manual": "User Manual for Techman Robots Quick Changer 2FG7 v6.6.0, pages 63-66 and 75-78",
+      "hardware_record": "equipment/ONROBOT_2FG7_GRIPPER_CONTROL.md",
+      "mount_history": "legacy plan.md and tasks.log: K bracket removed; 2026-07-20 physical inspection confirmed direct-mounted item 109498 QC-R v3 with no Adapter K",
+      "cad": "vendor/onrobot_2fg7/meshes"
+    }
+  },
+  "profiles": {
+    "legacy_cad_dry_run": {
+      "description": "Reproduces the already-benchmarked identity mount and CAD-tip virtual grasp point.",
+      "quick_changer_mode": "omitted",
+      "flange_to_2fg7_device_origin_xyz_m": [0.0, 0.0, 0.0],
+      "mount_rpy_rad": [0.0, 0.0, 0.0],
+      "device_origin_to_cad_origin_xyz_m": [0.0, 0.0, 0.0],
+      "device_origin_to_cad_origin_rpy_rad": [0.0, 0.0, 0.0],
+      "pin_grasp_tcp_xyz_m": [0.0, 0.0, 0.16225],
+      "pin_grasp_tcp_rpy_rad": [0.0, 0.0, 0.0],
+      "mount_status": "legacy_simulation_only",
+      "pin_grasp_status": "legacy_cad_tip_plane_not_calibrated"
+    },
+    "watson_qc_nominal": {
+      "description": "Watson candidate for the physically confirmed direct stack with a centred, configurable 10 mm bare-pin grasp baseline.",
+      "quick_changer_mode": "standard_robot_side_nominal",
+      "qc_variant": "onrobot_109498_qc_r_v3",
+      "flange_to_qc_xyz_m": [0.0, 0.0, 0.0],
+      "mount_rpy_rad": [0.0, 0.0, 0.0],
+      "device_origin_to_cad_origin_xyz_m": [0.0, 0.0, 0.0],
+      "device_origin_to_cad_origin_rpy_rad": [0.0, 0.0, 0.0],
+      "pin_grasp_tcp_xyz_m": [0.0, 0.0, 0.15725],
+      "pin_grasp_tcp_rpy_rad": [0.0, 0.0, 0.0],
+      "application_pin_baseline": {
+        "pin_axis_from_gripper_toward_specimen": [0.0, 0.0, 1.0],
+        "lateral_alignment": "centred_between_inward_fingers",
+        "clear_pin_length_before_specimen_m": 0.01,
+        "grasp_point_on_clear_section": "midpoint",
+        "clear_section_start_xyz_from_2fg7_device_origin_m": [0.0, 0.0, 0.15225],
+        "pinch_xyz_from_2fg7_device_origin_m": [0.0, 0.0, 0.15725],
+        "specimen_near_point_xyz_from_2fg7_device_origin_m": [0.0, 0.0, 0.16225],
+        "pinch_to_specimen_m": 0.005,
+        "specimen_geometry": "variable_not_fixed",
+        "remaining_pin_length_after_specimen_m": null,
+        "parameterization": "clear length, specimen geometry, and remaining pin length may be overridden per specimen",
+        "coordinate_status": "vendored_cad_relative_baseline_pending_physical_tcp_calibration",
+        "status": "user_selected_10mm_initial_baseline_2026_07_21"
+      },
+      "mount_status": "direct_flange_qc_and_clock_features_confirmed_numeric_approved_v2_working_cad_yaw_pending",
+      "cad_registration_status": "user_approved_v2_labelled_working_approximation_pending_clock_registration_conservative_proxy_active",
+      "pin_grasp_status": "user_selected_10mm_cad_relative_baseline_not_physically_calibrated"
+    }
+  }
+}

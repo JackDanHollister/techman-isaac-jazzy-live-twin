@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "techman-isaac-jazzy-live-twin"
+version = "0.1.0"
+description = "ROS 2 Jazzy live digital twin and guarded Isaac HIL reference for Techman robots"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Jack Daniel Hollister"},
+]
+dependencies = [
+  "numpy>=1.24",
+  "PyYAML>=6.0",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0",
+]
+
+[project.urls]
+Repository = "https://github.com/JackDanHollister/techman-isaac-jazzy-live-twin"
+Issues = "https://github.com/JackDanHollister/techman-isaac-jazzy-live-twin/issues"
+
+[tool.setuptools.packages.find]
+include = ["pin_axis_3d_sim*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["."]

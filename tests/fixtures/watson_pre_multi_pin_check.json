@@ -1,0 +1,66 @@
+{
+  "schema_version": 8,
+  "timestamp_utc": "2026-07-21T15:02:17.742075+00:00",
+  "mode": "check",
+  "status": "check_passed",
+  "motion_commanded": false,
+  "namespace": "/watson",
+  "robot_ip": "192.0.2.23",
+  "robot_interface": "enp1s0",
+  "robot_source_ip": "192.0.2.100",
+  "robot_mac": "02:00:00:00:00:23",
+  "runner_source_sha256": "cea53700c0bd58d65c2ed90bef28a90c423ca9e21c478ac4b4a1480b0d77e355",
+  "guard_source_sha256": "44b576d2b0f8c79b4ac8a54275b2bc83fed1a8d5b2d06e3b7fe882bdddc6a677",
+  "health_failures": [],
+  "stable_health": {
+    "is_svr_connected": true,
+    "is_sct_connected": true,
+    "is_data_table_correct": true,
+    "robot_link": true,
+    "project_run": true,
+    "robot_error": false,
+    "project_pause": false,
+    "safetyguard_a": false,
+    "e_stop": false,
+    "error_code": 0,
+    "project_speed": 5,
+    "feedback_joint_positions": [
+      0.4027028468594433,
+      -0.20027643845571116,
+      2.0487895339900244,
+      -0.2768182847666513,
+      1.561129318354018,
+      0.2636938440853341
+    ]
+  },
+  "controller_tool_settings_promotion_passed": false,
+  "controller_tool_audit": {
+    "promotion_passed": false,
+    "settings": {
+      "active_tcp_name": "RobotEndFlange",
+      "tcp_value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mass_kg": 0.0,
+      "principal_moi": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mass_centre_frame": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "report_payload_sha256": "2f37288e82d0c85e39c4c6350d6352529db1cd20401ff30b6a77c34347980a4c"
+}
