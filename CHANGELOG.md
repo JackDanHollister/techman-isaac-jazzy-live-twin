@@ -19,6 +19,10 @@ here.
 
 ### Added
 
+- Live demonstration video: Watson runs the guarded seven-pin air replay while
+  Isaac mirrors the measured joints, real cell and twin in one shot.
+- First-run troubleshooting guide covering the isolated ROS domain, the site
+  profile requirement, runner stack ownership, and Listen-node state.
 - Standalone repository packaging.
 - Sanitised, hash-pinned seven-pin preview and execution reference bundle.
 - Offline preview, read-only live twin, live dry-run, and guarded execute modes.

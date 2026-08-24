@@ -20,3 +20,4 @@ __pycache__/
 *.webm
 
 !docs/media/seven_pin_verticalization.png
+!docs/media/watson_live_twin_demo.mp4

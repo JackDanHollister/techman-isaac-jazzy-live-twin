@@ -19,7 +19,14 @@ used by that demonstration.
 > a system-specific empty-cell air replay, not a general robot-control product
 > or a safety system.
 
+[![Watch the live twin demo](docs/media/watson_live_twin_demo_poster.jpg)](docs/media/watson_live_twin_demo.mp4)
+
+*Click to play: Watson runs the guarded seven-pin air replay while Isaac mirrors
+the measured joints live (17 s).*
+
 ![Seven-pin Isaac preview](docs/media/seven_pin_verticalization.png)
+
+*The bundled offline preview scene — runs with no robot and no ROS.*
 
 ## What it does
 
@@ -151,7 +158,19 @@ A non-interactive proof run is also available:
 
 ## 2. Read-only live twin
 
-Start the Techman Jazzy stack separately with trajectory execution disabled.
+Two prerequisites, both one-time:
+
+- create `local/watson-site.env` from `config/watson-site.env.example` with your
+  cell's real values (see [Installation](docs/installation.md)) — the read-only
+  preflight reads it too;
+- start the Techman Jazzy stack separately with trajectory execution disabled,
+  exporting the pinned isolated domain first so the viewer can see it:
+
+```bash
+export ROS_DOMAIN_ID=219
+export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
+```
+
 Then run:
 
 ```bash
@@ -198,6 +217,29 @@ network/graph provenance, TMflow state, exact start pose, confirmation tokens,
 visible manual arming, and explicit cell-clear confirmation.
 
 Read [Physical execution](docs/physical-execution.md) before considering it.
+
+## Troubleshooting first runs
+
+Every error below is real — each one was hit on a fresh checkout of this
+repository on a working cell. The cause is always the same: the launchers make
+strict assumptions and fail closed rather than guessing.
+
+- **`Node not found` at viewer start** — the launchers pin `ROS_DOMAIN_ID=219`
+  with localhost-only discovery. A separately started Techman bringup must
+  export the same domain before `ros2 launch`, or the two ROS graphs cannot
+  see each other.
+- **`<interface> has no physical Ethernet carrier`** — create
+  `local/watson-site.env` from `config/watson-site.env.example` and set your
+  real robot NIC name and addresses. Without it the preflight falls back to
+  the documentation example values, which match no real machine.
+- **`a tm_driver or move_group process already exists`** — dry-run and execute
+  launch and own the robot stack themselves. Stop any separately started
+  bringup first, or audit it and pass `--use-existing-stack` to the runner.
+  Only the read-only live twin expects a pre-existing stack.
+- **`Watson health gate failed: Listen Node is not connected`** — the TMflow
+  Listen project must be running and sitting in its Listen node. An arm merely
+  parked at the Listen position is not enough: dry-run passes without the
+  Listen connection because it sends nothing, execute refuses.
 
 ## Current validation
 

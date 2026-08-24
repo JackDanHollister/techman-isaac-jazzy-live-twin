@@ -66,6 +66,11 @@ Execute requires all of the following:
 The command is intentionally discoverable in `--help`, but is omitted here to
 discourage copy-and-run use on an unreviewed cell.
 
+"Listen node connected" means the TMflow project is running and currently
+sitting in its Listen node. An arm merely parked at the Listen position fails
+the health gate: dry-run passes without the Listen connection because it sends
+nothing, execute refuses.
+
 ## Stop behavior
 
 Isaac Pause, Stop, panel Stop, window close, SIGINT, SIGTERM, and SIGHUP all

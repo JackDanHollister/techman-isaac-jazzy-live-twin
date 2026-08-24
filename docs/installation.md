@@ -56,6 +56,14 @@ workspace. The current shell launchers look for:
 $HOME/tm2_ws_apt/install/setup.bash
 ```
 
+All launchers pin the Watson graph to an isolated domain. Any Techman bringup
+you start yourself must match, or its nodes are invisible to the viewers:
+
+```bash
+export ROS_DOMAIN_ID=219
+export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
+```
+
 The reference physical profile was tested with:
 
 - TM5S description and MoveIt configuration;
@@ -70,7 +78,9 @@ These site assumptions must be parameterised before using another cell.
 The physical Watson profile validates an isolated robot interface and fixed
 private subnet. The tracked example uses RFC 5737 documentation addresses that
 cannot reach a real device. Replace every value with the reviewed cell's local
-configuration; do not copy example network values blindly.
+configuration; do not copy example network values blindly. The read-only live
+twin's preflight reads the same profile, so create it before any live mode,
+not just before physical execution.
 
 Create the ignored site profile before any physical mode:
 

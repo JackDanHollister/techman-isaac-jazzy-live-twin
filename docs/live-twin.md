@@ -7,8 +7,11 @@ robot command path.
 
 ## Start
 
-Bring up the Techman ROS graph separately with MoveIt trajectory execution
-disabled, then run:
+Create `local/watson-site.env` first (see Installation — the preflight reads
+it). Bring up the Techman ROS graph separately with MoveIt trajectory
+execution disabled, exporting `ROS_DOMAIN_ID=219` and
+`ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST` so the viewer's pinned isolated
+domain can see it, then run:
 
 ```bash
 ./scripts/run_isaac_live_twin.sh
